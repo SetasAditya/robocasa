@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><title>CoBot scenario collection</title>
+<style>body{background:#111827;color:#eef2ff;font:16px system-ui;margin:24px}img{width:48%;border-radius:8px}button,select{padding:10px;margin:5px}#error{color:#fda4af}#instruction{font-size:22px}kbd{background:#334155;padding:3px}</style>
+<h2>CoBot collection</h2><p id="instruction">Loading…</p><div><img id="kinect"><img id="wrist"></div>
+<p><button onclick="command('reset')">Reset</button><button onclick="command('start')">Record</button><button onclick="command('save')">Save</button><button onclick="command('discard')">Discard / reset</button><select id="stage"></select></p>
+<p><button id="mode" onclick="toggle()">Arm mode (B)</button> Hold <kbd>Shift</kbd> to move. W/S forward/back, A/D left/right, R/F up/down. Q/E yaw, Z/X pitch, T/G roll. Space toggles gripper. Release Shift to stop.</p>
+<p id="status"></p><p id="error"></p>
+<script>
+let keys=new Set(),mode='arm',closed=false,busy=false,ready=false;
+function toggle(){mode=mode==='arm'?'base':'arm';document.querySelector('#mode').textContent=mode+' mode (B)'}
+async function command(op,extra={}){if(busy)return;busy=true;document.querySelectorAll('button').forEach(b=>b.disabled=true);try{const response=await fetch('/api',{method:'POST',headers:{'Content-Type':'application/json','X-Session-Token':'__TOKEN__'},body:JSON.stringify({op,...extra})});const data=await response.json();if(data.error)throw Error(data.error);for(const k of ['kinect','wrist'])document.getElementById(k).src='data:image/jpeg;base64,'+data.images[k];document.querySelector('#instruction').textContent=data.instruction;const stage=document.querySelector('#stage');if(!stage.options.length)for(const s of data.stages)stage.add(new Option(s,s));document.querySelector('#status').textContent=`${data.scenario_id} · ${data.steps} steps · ${data.recording?'RECORDING':'Preview'} · Task success: ${data.success}`+(data.saved?' · Saved '+data.saved:'');document.querySelector('#error').textContent='';ready=true;}catch(e){keys.clear();document.querySelector('#error').textContent=e.message;}finally{busy=false;document.querySelectorAll('button').forEach(b=>b.disabled=false)}}
+window.onkeydown=e=>{if(['INPUT','SELECT'].includes(e.target.tagName))return;e.preventDefault();keys.add(e.code);if(!e.repeat&&e.code==='KeyB')toggle();if(!e.repeat&&e.code==='Space')closed=!closed};window.onkeyup=e=>keys.delete(e.code);window.onblur=()=>keys.clear();document.addEventListener('visibilitychange',()=>keys.clear());
+const axis=(a,b)=>(keys.has(a)?1:0)-(keys.has(b)?1:0);
+setInterval(()=>{if(!ready||busy||!(keys.has('ShiftLeft')||keys.has('ShiftRight')))return;command('step',{mode,closed,stage:document.querySelector('#stage').value,move:[axis('KeyW','KeyS'),axis('KeyA','KeyD'),axis('KeyR','KeyF')],turn:[axis('KeyT','KeyG'),axis('KeyZ','KeyX'),axis('KeyQ','KeyE')]})},50);command('status');
+</script>

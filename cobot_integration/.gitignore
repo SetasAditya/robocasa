@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv*/
+outputs/
+bundles/
+recordings/
+*.hdf5
+*.h5
+*.sqlite*
+*.log
+MUJOCO_LOG.TXT

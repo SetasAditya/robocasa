@@ -1,0 +1,40 @@
+{
+  "source": "RoboVision deployed CoBot integration and scenario suite v1.1",
+  "original_source_sha256": {
+    "cobot.py": "207517009fb76850f4583c4280bd4a229497002ab79cdb031291b1aefec7c9ec",
+    "cobot_fourbar.py": "2410ac9d19fd72c0befb3be9c9b22d3156e97d6e6c6d857701a7bb3dd5c801d8",
+    "kitchen_tasks.py": "cdfdb852debf1bc1576fef87edc0499c6fbb799847d1d3bd14a401ddcaf57a4b",
+    "kitchen_countertop.py": "329c42bd7d4e267c46768dc7ef6c7adbaec03f9bd4bbc2e0ef869f1a8c3616b8",
+    "kitchen_recording.py": "9bb4c020db04ec2ecf95eebb7f7daaae8ba2bb54b869eca0f8f0a69a3e60325a",
+    "moma_validation.py": "ae6bc0778369587de053ad5675e5668d6a8cba843f4e04585554bfe247b72ec4",
+    "source_commits.json": "c004b7d2c02f4f264fa4d6e4fc3ef817b755875434fb59ee6186dce489ada0db",
+    "cobot_scenarios/console.html": "0b4677377a34867dc50a8fea73dabdf624463db85117b89a33723e0ab81b7e5a",
+    "cobot_scenarios/__main__.py": "b24aee2f07e653baa7ceb89ec7df19dc6dda0acf0633bcef403b6cadc60ef33f",
+    "cobot_scenarios/browser.py": "992875e723f94aa013ea357c613ee682cdf69e3ad762982c142a0dd991e92b85",
+    "cobot_scenarios/README.md": "4f2b42ee2b7aae6760ce64ea3c4ac4bf94c21b80e207a6807465a23f3b815e89",
+    "cobot_scenarios/geometry.py": "ffa8dd531b54c84ab0cecbf15b50e250dcae615f480343b4b1479b3f033b37da",
+    "cobot_scenarios/spec.py": "c06496fc8d1ec8afee67dfabe768d16bb002bc3bb95e3a78ef0b9e3db19c2b0b",
+    "cobot_scenarios/__init__.py": "508b24418642599f5ee9226150f46ee04c9da775e62968861310904a438eb5bb",
+    "cobot_scenarios/core.py": "2091542066d2866ea1607b5659211d65e73d312cc334e1bfbe02f069cd28d298",
+    "cobot_scenarios/runtime.py": "2739e543d86200a7c32726495b43ccf86bee7189b979672fb706e7cc88ab2b94",
+    "cobot_scenarios/reporting.py": "3f18ca9f954acaef286d4fb6d073a36699a6c2950c700642c532096384fa9497",
+    "cobot_scenarios/tests/test_core.py": "4a3e59e0f44643cf58ce73149c415af78e8963d99c694774461d88242c600db3",
+    "cobot_scenarios/tests/simulation_start_checks.py": "2cd8b95db1480845801d6eef8c5fcb8932b5e52519383745178ef96b29c808b8",
+    "cobot_scenarios/tests/test_geometry.py": "2d9ba49b64e0544723c6fcf626e96d14a653165c661e83c2edbcc575be9855dd",
+    "cobot_scenarios/tests/simulation_smoke.py": "636c0122498acac19c399d13420ec486e5aad74826897beef2b09b49a9368c41"
+  },
+  "cleanup": [
+    "Only runtime dependency closure retained; legacy campaign collectors and task-specific experts excluded",
+    "Prebuilt deployed hand retained; removed RoboLab-dependent builder",
+    "Robot mesh references made relative to bundled assets",
+    "Camera source-model metadata points to bundled hand XML",
+    "Retained only the deployed surface/bin task classes and Suite configuration; removed unused legacy presets and countertop variant",
+    "Bootstrap respects an explicitly selected installed RoboCasa source tree"
+  ],
+  "upstream_source_commits": {
+    "robocasa": "6f90063c0ec2b9916bbd977368b54c98d9c2d908",
+    "robosuite": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c",
+    "robocasa-mimicgen": "b89c3b5e02927ceb8599401cc01551a8da21fbf8",
+    "robocasa-robomimic": "271a76c2d55c8b0f94d3d589f26fcae0d47f64a1"
+  }
+}

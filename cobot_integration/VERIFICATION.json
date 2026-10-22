@@ -1,0 +1,24 @@
+{
+  "source": "RoboVision deployed v1.1",
+  "standard_library_tests_passed": 15,
+  "scenario_definitions_validated": 1000,
+  "controller_configs_equal_to_deployed": {
+    "scenarios": 1000,
+    "render_modes": 2
+  },
+  "unchanged_physical_task_classes": [
+    "KitchenFetchSurface",
+    "KitchenBinPlacement",
+    "KitchenCollectTwoStations"
+  ],
+  "robot_xml_unchanged_except_relative_file_references": true,
+  "robot_meshes_identical_to_deployed": 9,
+  "physics": "pending; direct runtime startup stalled in NFS reads (rpc_wait_bit_killable) before simulator import",
+  "prior_local_v1_1_regression": {
+    "initialization_passed": 40,
+    "total": 40,
+    "approach_passed": 37,
+    "approach_needs_review": 3
+  },
+  "accepted_demonstrations_included": 0
+}

@@ -1,3 +1,29 @@
+# CoBot task suite for RoboCasa
+
+The `cobot-task-suite` branch adds CoBot mobile manipulation and collaborative
+demonstration collection to RoboCasa.
+
+- **Robot:** CoBot mobile base, Kinova arm, linked Robotiq 2F85 gripper and paired
+  simulated Kinect/wrist cameras, with bundled base/gripper assets.
+- **Tasks:** eight families covering surface transfer, selective delivery, dishes
+  to sink, cabinet/drawer articulation, cabinet/microwave transfer and two-station
+  collection. The shared index contains 1,000 requests (900 train, 100 validation),
+  including 96 human seed slots.
+- **Workflow:** reproducible scene preparation, browser teleoperation, recording,
+  replay, collaborator assignments, acceptance checks, preview gallery and coverage.
+
+Start with the [CoBot setup guide](cobot_integration/README.md), then follow the
+[task and collection guide](cobot_scenarios/README.md). The branch contains source,
+robot assets and scenario definitions; generated scenes and trajectories stay
+outside Git. Scenario requests are collection targets, not completed demonstrations.
+
+The branch passes 15 package tests. Fresh RoboVision physics validation remains
+pending after NFS startup stalls; see the
+[verification record](cobot_integration/VERIFICATION.json). Successful manipulation,
+automatic trajectory expansion and VLA training require further qualification.
+
+---
+
 <h1 align="center">RoboCasa</h1>
 <!-- ![alt text](https://github.com/UT-Austin-RPL/maple/blob/web/src/overview.png) -->
 <img src="docs/images/readme.webp" width="100%" />
