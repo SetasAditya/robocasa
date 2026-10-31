@@ -862,6 +862,10 @@ class Kitchen(ManipulationEnv, metaclass=KitchenEnvMeta):
                 self.model.merge_objects([model])
         else:
             self.object_cfgs = self._get_obj_cfgs()
+            if self.layout_id == SceneRegistry.LayoutType.LAB_APT:
+                from robocasa.models.scenes.labapt import adapt_task_placements
+                adapt_task_placements(self)
+
             all_obj_cfgs = []
             for obj_num, cfg in enumerate(self.object_cfgs):
                 cfg["type"] = "object"
@@ -1135,6 +1139,20 @@ class Kitchen(ManipulationEnv, metaclass=KitchenEnvMeta):
         # step through a few timesteps to settle objects
         action = np.zeros(self.action_spec[0].shape)  # apply empty action
 
+        # A zero absolute OSC action commands the world origin, not a hold.
+        # Preserve the collision-checked starting pose during LabApt settling.
+        if self.layout_id == SceneRegistry.LayoutType.LAB_APT:
+            for robot in self.robots:
+                composite = robot.composite_controller
+                for part, controller in composite.part_controllers.items():
+                    if (getattr(controller, "input_type", None) == "absolute"
+                            and getattr(controller, "input_ref_frame", None) == "world"
+                            and getattr(controller, "control_dim", None) == 6):
+                        controller.update(force=True)
+                        start, end = composite._action_split_indexes[part]
+                        action[start:start + 3] = controller.ref_pos
+                        action[start + 3:end] = T.quat2axisangle(T.mat2quat(controller.ref_ori_mat))
+
         # Since the env.step frequency is slower than the mjsim timestep frequency, the internal controller will output
         # multiple torque commands in between new high level action commands. Therefore, we need to denote via
         # 'policy_step' whether the current step we're taking is simply an internal update of the controller,
@@ -1207,6 +1225,10 @@ class Kitchen(ManipulationEnv, metaclass=KitchenEnvMeta):
                 for (k, v) in self.fixture_refs.items()
             }
         )
+        if self.layout_id == SceneRegistry.LayoutType.LAB_APT:
+            from robocasa.models.scenes.labapt import episode_metadata
+            ep_meta["labapt"] = episode_metadata()
+            ep_meta["labapt"]["placement_adaptations"] = getattr(self, "_labapt_placement_adaptations", [])
         ep_meta["cam_configs"] = deepcopy(self._cam_configs)
         ep_meta["init_robot_base_pos"] = list(self.init_robot_base_pos)
         ep_meta["init_robot_base_ori"] = list(self.init_robot_base_ori)
@@ -1649,6 +1671,10 @@ class Kitchen(ManipulationEnv, metaclass=KitchenEnvMeta):
         Returns:
             Fixture: fixture object
         """
+        if self.layout_id == SceneRegistry.LayoutType.LAB_APT and id == FixtureType.COUNTER and ref == FixtureType.STOOL:
+            # Several native table tasks use a stool only as a table locator.
+            # LabApt has a measured dining table; no surrogate stool is needed.
+            return self.get_fixture(FixtureType.DINING_COUNTER, size=size, return_all=return_all)
         # case 1: id refers to fixture object directly
         if isinstance(id, Fixture):
             return id
@@ -1710,6 +1736,11 @@ class Kitchen(ManipulationEnv, metaclass=KitchenEnvMeta):
                 return self.fixtures[key]
         else:
             ref_fixture = self.get_fixture(ref)
+            # Native microwave/fridge transfer tasks stage food in a container. Select
+            # a support that actually has room; LabApt's occupied appliance
+            # counter cannot hold a 30 cm plate, while its dining table can.
+            if self.layout_id == SceneRegistry.LayoutType.LAB_APT and id == FixtureType.COUNTER and isinstance(ref_fixture, (Microwave, Fridge)):
+                size = tuple(np.maximum(size, (0.30, 0.30)))
 
             assert isinstance(id, FixtureType)
             cand_fixtures = []

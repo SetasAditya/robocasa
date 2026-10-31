@@ -1,0 +1,3 @@
+default:
+  top_texture: textures/flat/white.png
+  base_texture: textures/flat/white.png

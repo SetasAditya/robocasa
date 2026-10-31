@@ -89,3 +89,7 @@ coverage goals rather than guaranteed augmentation results.
 Generated scenes, recordings, caches, assignment databases and legacy campaign
 scripts are excluded. The [robot asset notes](assets/README.md) describe geometry
 and licensing; camera calibration is provisional simulation calibration.
+
+## LabApt held-out kitchen
+
+The measured lab kitchen is registered as layout 100 (`LayoutType.LAYOUT100` / `LAB_APT`). See [labapt/README.md](labapt/README.md) for usage and optional validation commands. The existing scenario suite and curriculum are preserved; LabApt is excluded from default training and layout groups.

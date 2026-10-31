@@ -1,0 +1,1033 @@
+{
+  "schema_version": 1,
+  "layout_id": 100,
+  "layout_name": "LAB_APT",
+  "meters_per_unit": 1,
+  "up_axis": "Z",
+  "scan_to_layout": {
+    "rotation_matrix": [
+      [
+        0.7648421872844885,
+        0.644217687237691,
+        0.0
+      ],
+      [
+        -0.644217687237691,
+        0.7648421872844885,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "translation": [
+      -0.2902413464291356,
+      -3.1817049958935595,
+      1.11
+    ]
+  },
+  "floor_z_in_scan": -1.11,
+  "fixtures": [
+    {
+      "name": "left_base",
+      "type": "labapt_single_cabinet",
+      "position_m": [
+        -1.256,
+        -0.077,
+        0.478
+      ],
+      "dimensions_m": [
+        0.3639999999999999,
+        0.6,
+        0.76
+      ],
+      "source": "cabinet_pipeline/prepared_006/asset_metadata.json",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "sink_cabinet",
+      "type": "labapt_hinge_cabinet",
+      "position_m": [
+        -0.687,
+        -0.077,
+        0.37849999999999995
+      ],
+      "dimensions_m": [
+        0.746,
+        0.6,
+        0.561
+      ],
+      "source": "cabinet_pipeline/prepared_006/asset_metadata.json",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "pantry",
+      "type": "labapt_hinge_cabinet",
+      "position_m": [
+        -1.8275,
+        -0.077,
+        0.974
+      ],
+      "dimensions_m": [
+        0.765,
+        0.6,
+        1.752
+      ],
+      "source": "labapt_points.npz: kitchen front projection x=[-2.21,-1.445],z=[-.787,.965]",
+      "geometry_status": "scan projection estimate",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "sink_fascia",
+      "type": "box",
+      "position_m": [
+        -0.687,
+        -0.377,
+        0.7585
+      ],
+      "dimensions_m": [
+        0.746,
+        0.018,
+        0.199
+      ],
+      "source": "cabinet_pipeline: fascia between sink doors and countertop",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "drawer_0",
+      "type": "drawer",
+      "position_m": [
+        0.51,
+        -0.077,
+        0.19900000000000007
+      ],
+      "dimensions_m": [
+        0.39,
+        0.6,
+        0.20200000000000007
+      ],
+      "source": "labapt_points.npz: four drawer seams; cabinet collision envelope",
+      "geometry_status": "scan projection estimate",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "drawer_1",
+      "type": "drawer",
+      "position_m": [
+        0.51,
+        -0.077,
+        0.395
+      ],
+      "dimensions_m": [
+        0.39,
+        0.6,
+        0.18999999999999995
+      ],
+      "source": "labapt_points.npz: four drawer seams; cabinet collision envelope",
+      "geometry_status": "scan projection estimate",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "drawer_2",
+      "type": "drawer",
+      "position_m": [
+        0.51,
+        -0.077,
+        0.585
+      ],
+      "dimensions_m": [
+        0.39,
+        0.6,
+        0.19000000000000003
+      ],
+      "source": "labapt_points.npz: four drawer seams; cabinet collision envelope",
+      "geometry_status": "scan projection estimate",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "drawer_3",
+      "type": "drawer",
+      "position_m": [
+        0.51,
+        -0.077,
+        0.769
+      ],
+      "dimensions_m": [
+        0.39,
+        0.6,
+        0.178
+      ],
+      "source": "labapt_points.npz: four drawer seams; cabinet collision envelope",
+      "geometry_status": "scan projection estimate",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "dishwasher",
+      "type": "dishwasher",
+      "position_m": [
+        0.006,
+        -0.05,
+        0.47000000000000003
+      ],
+      "dimensions_m": [
+        0.58,
+        0.57,
+        0.76
+      ],
+      "source": "robolab/scene_replacement/cabinets.py: obstacle_dishwasher",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "sink",
+      "type": "sink",
+      "position_m": [
+        -0.72,
+        -0.015,
+        0.885
+      ],
+      "dimensions_m": [
+        0.6,
+        0.43,
+        0.15
+      ],
+      "source": "robolab/scene_replacement/cabinets.py: sink_envelope; faucet height inferred",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "sink_counter",
+      "type": "labapt_counter",
+      "position_m": [
+        -0.875,
+        -0.077,
+        0.87
+      ],
+      "dimensions_m": [
+        1.15,
+        0.6,
+        0.03
+      ],
+      "source": "cabinet front and countertop bounds",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "dish_rack",
+      "type": "dish_rack",
+      "position_m": [
+        -1.25,
+        -0.1,
+        1.01
+      ],
+      "dimensions_m": [
+        0.3,
+        0.25,
+        0.25
+      ],
+      "source": "labapt_points.npz: visible black dish rack left of sink",
+      "geometry_status": "scan projection estimate",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "appliance_counter",
+      "type": "labapt_counter",
+      "position_m": [
+        0.21,
+        -0.077,
+        0.87
+      ],
+      "dimensions_m": [
+        1.0,
+        0.6,
+        0.03
+      ],
+      "source": "robolab/scene_replacement/cabinets.py: dishwasher/drawer span",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "wall_shelf_0",
+      "type": "labapt_open_cabinet",
+      "position_m": [
+        -0.31,
+        0.1,
+        1.385
+      ],
+      "dimensions_m": [
+        1.84,
+        0.26,
+        0.035
+      ],
+      "source": "labapt_points.npz: shelf projection",
+      "geometry_status": "scan projection estimate",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "wall_shelf_1",
+      "type": "labapt_open_cabinet",
+      "position_m": [
+        -0.31,
+        0.1,
+        1.8050000000000002
+      ],
+      "dimensions_m": [
+        1.84,
+        0.26,
+        0.035
+      ],
+      "source": "labapt_points.npz: shelf projection",
+      "geometry_status": "scan projection estimate",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "microwave",
+      "type": "microwave",
+      "position_m": [
+        0.45,
+        0.060000000000000005,
+        1.0175
+      ],
+      "dimensions_m": [
+        0.45,
+        0.35,
+        0.265
+      ],
+      "source": "microwave_refinement/final_build_v2/manifest.resolved.json",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "fridge",
+      "type": "labapt_fridge",
+      "position_m": [
+        1.47164647153443,
+        -0.24867972178134423,
+        0.8399999999999999
+      ],
+      "dimensions_m": [
+        0.72,
+        0.76,
+        1.68
+      ],
+      "source": "fridge_replacement/closed.usda + asset_build_report.json",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "dining_black_table",
+      "type": "counter",
+      "position_m": [
+        -0.15201364585952962,
+        -3.5443788279596142,
+        0.435
+      ],
+      "dimensions_m": [
+        3.05,
+        0.9,
+        0.87
+      ],
+      "source": "table_replacement/replaced.usda + README.txt",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "air_fryer",
+      "type": "box",
+      "position_m": [
+        0,
+        0,
+        1.0150000000000001
+      ],
+      "dimensions_m": [
+        0.27,
+        0.265,
+        0.26
+      ],
+      "source": "configs/scene_replacement/labapt_air_fryer_tray.json",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    }
+  ],
+  "optional_fixtures": {
+    "dish_rack": "Native tasks enable it by name; fixed scan-estimated pose."
+  },
+  "source_hashes": {
+    "output/xgrids2_lab/cabinet_pipeline/prepared_006/asset_metadata.json": "55e028a4073e15129370fc0358eb79cb971da81ed4783993f1ab1438a952c3d4",
+    "output/xgrids2_lab/fridge_replacement/closed.usda": "b019a4c48e26a18e6f6144b90a843601b28e6c80f7fe404981e3877a0101b2b1",
+    "output/xgrids2_lab/fridge_replacement/asset_build_report.json": "425a664015aa7f84bbbbb53a43b1376d8a9affdfed07471a942be2e0e0879183",
+    "output/xgrids2_lab/table_replacement/replaced.usda": "935c92828735378a15749b60399b4c9b0c39f03113b762cd3af763f7287d714a",
+    "output/xgrids2_lab/microwave_refinement/final_build_v2/manifest.resolved.json": "04dd83e1fb8387672169b85c9a3e1d602272f55c886dcb89e932d3b9d72b9548"
+  },
+  "limitations": [
+    "Functional procedural/native substitutes, not exact manufacturer reconstructions.",
+    "Pantry and drawer bounds estimated from metric scan projection; interiors and dynamics inferred.",
+    "Room shell currently covers the kitchen working area, not the full apartment.",
+    "No separate oven verified in the source kitchen.",
+    "Air fryer is a fixed obstacle; no native air-fryer task capability claimed.",
+    "Source scan uncertainty is separate from numeric export precision."
+  ],
+  "appearance": {
+    "dining_black_table": {
+      "texture": "textures/wood/gray_wood_grain.png",
+      "rgba": [
+        0.22,
+        0.19,
+        0.16,
+        1
+      ],
+      "texrepeat": [
+        1,
+        1
+      ],
+      "texuniform": false,
+      "reflectance": 0,
+      "shininess": 0.1,
+      "description": "Dark wood grain appearance approximation; not a measured material. Real tabletop unchanged.",
+      "texture_sha256": "62efa660eb1014116f11939a6574e8de60634a1986c3493f37d6e1a438e39109"
+    }
+  },
+  "room": {
+    "schema_version": 1,
+    "scope": "kitchen and black-table area; front and left entry remain open",
+    "scan_file": "/robodata/aditya/RoboLab/output/xgrids2_lab/table_replacement/labapt_points.npz",
+    "scan_sha256": "bafbc1b610c9a091eb394fc73a51f05c300a5e751f6b4680951c55c11dd07714",
+    "scan_to_layout": {
+      "rotation_matrix": [
+        [
+          0.7648421872844885,
+          0.644217687237691,
+          0.0
+        ],
+        [
+          -0.644217687237691,
+          0.7648421872844885,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "translation": [
+        -0.2902413464291356,
+        -3.1817049958935595,
+        1.11
+      ]
+    },
+    "plane_fits": {
+      "back": {
+        "dependent_axis": 1,
+        "independent_axis": 0,
+        "slope": -0.004211760207678058,
+        "intercept": 0.2579795865928365,
+        "roi_m": [
+          [
+            -2.2,
+            1.5
+          ],
+          [
+            0.12,
+            0.43
+          ],
+          [
+            2.0,
+            3.15
+          ]
+        ],
+        "sample_points": 1746,
+        "inliers": 739,
+        "inlier_fraction": 0.42325315005727376,
+        "inlier_median_error_m": 0.01203710911902003,
+        "inlier_p95_error_m": 0.023413049700019558,
+        "all_roi_p95_error_m": 0.11004797070028481
+      },
+      "right": {
+        "dependent_axis": 0,
+        "independent_axis": 1,
+        "slope": -0.002609710763677872,
+        "intercept": 4.503900141576422,
+        "roi_m": [
+          [
+            4.25,
+            4.7
+          ],
+          [
+            -1.9,
+            0.1
+          ],
+          [
+            0.65,
+            2.6
+          ]
+        ],
+        "sample_points": 7339,
+        "inliers": 3987,
+        "inlier_fraction": 0.543262024799019,
+        "inlier_median_error_m": 0.010388459264537265,
+        "inlier_p95_error_m": 0.02314816880954449,
+        "all_roi_p95_error_m": 0.12515287218991075
+      },
+      "divider": {
+        "dependent_axis": 0,
+        "independent_axis": 1,
+        "slope": 0.0002312489080983739,
+        "intercept": -2.331204033038018,
+        "roi_m": [
+          [
+            -2.5,
+            -2.1
+          ],
+          [
+            -5.3,
+            -1.9
+          ],
+          [
+            0.78,
+            1.3
+          ]
+        ],
+        "sample_points": 4150,
+        "inliers": 3396,
+        "inlier_fraction": 0.8183132530120482,
+        "inlier_median_error_m": 0.006991003737238195,
+        "inlier_p95_error_m": 0.020499236591570102,
+        "all_roi_p95_error_m": 0.09726162076968671
+      }
+    },
+    "segments": [
+      {
+        "name": "back_red",
+        "plane": "back",
+        "horizontal_range_m": [
+          -2.25,
+          1.6
+        ],
+        "z_range_m": [
+          0,
+          3.3
+        ],
+        "surface_midpoint_xy_m": [
+          -0.32499999999999996,
+          0.2593484086603319
+        ],
+        "outward_normal_xy": [
+          0.0042117228521278294,
+          0.9999911306559759
+        ],
+        "thickness_m": 0.04,
+        "backing_m": 0.1
+      },
+      {
+        "name": "back_pier_0",
+        "plane": "back",
+        "horizontal_range_m": [
+          1.6,
+          1.9
+        ],
+        "z_range_m": [
+          0,
+          3.3
+        ],
+        "surface_midpoint_xy_m": [
+          1.75,
+          0.25060900622939986
+        ],
+        "outward_normal_xy": [
+          0.0042117228521278294,
+          0.9999911306559759
+        ],
+        "thickness_m": 0.04,
+        "backing_m": 0.1
+      },
+      {
+        "name": "back_sill_0",
+        "plane": "back",
+        "horizontal_range_m": [
+          1.9,
+          2.28
+        ],
+        "z_range_m": [
+          0,
+          0.58
+        ],
+        "surface_midpoint_xy_m": [
+          2.09,
+          0.24917700775878934
+        ],
+        "outward_normal_xy": [
+          0.0042117228521278294,
+          0.9999911306559759
+        ],
+        "thickness_m": 0.04,
+        "backing_m": 0.1
+      },
+      {
+        "name": "back_lintel_0",
+        "plane": "back",
+        "horizontal_range_m": [
+          1.9,
+          2.28
+        ],
+        "z_range_m": [
+          2.57,
+          3.3
+        ],
+        "surface_midpoint_xy_m": [
+          2.09,
+          0.24917700775878934
+        ],
+        "outward_normal_xy": [
+          0.0042117228521278294,
+          0.9999911306559759
+        ],
+        "thickness_m": 0.04,
+        "backing_m": 0.1
+      },
+      {
+        "name": "back_glass_0",
+        "plane": "back",
+        "horizontal_range_m": [
+          1.9,
+          2.28
+        ],
+        "z_range_m": [
+          0.58,
+          2.57
+        ],
+        "surface_midpoint_xy_m": [
+          2.09,
+          0.24917700775878934
+        ],
+        "outward_normal_xy": [
+          0.0042117228521278294,
+          0.9999911306559759
+        ],
+        "thickness_m": 0.012,
+        "backing_m": 0
+      },
+      {
+        "name": "back_transom_0",
+        "plane": "back",
+        "horizontal_range_m": [
+          1.9,
+          2.28
+        ],
+        "z_range_m": [
+          2.14,
+          2.18
+        ],
+        "surface_midpoint_xy_m": [
+          2.09,
+          0.24917700775878934
+        ],
+        "outward_normal_xy": [
+          0.0042117228521278294,
+          0.9999911306559759
+        ],
+        "thickness_m": 0.04,
+        "backing_m": 0
+      },
+      {
+        "name": "back_pier_1",
+        "plane": "back",
+        "horizontal_range_m": [
+          2.28,
+          4.18
+        ],
+        "z_range_m": [
+          0,
+          3.3
+        ],
+        "surface_midpoint_xy_m": [
+          3.2299999999999995,
+          0.24437560112203635
+        ],
+        "outward_normal_xy": [
+          0.0042117228521278294,
+          0.9999911306559759
+        ],
+        "thickness_m": 0.04,
+        "backing_m": 0.1
+      },
+      {
+        "name": "back_sill_1",
+        "plane": "back",
+        "horizontal_range_m": [
+          4.18,
+          4.503900141576422
+        ],
+        "z_range_m": [
+          0,
+          0.58
+        ],
+        "surface_midpoint_xy_m": [
+          4.3419500707882115,
+          0.23969233406096577
+        ],
+        "outward_normal_xy": [
+          0.0042117228521278294,
+          0.9999911306559759
+        ],
+        "thickness_m": 0.04,
+        "backing_m": 0.1
+      },
+      {
+        "name": "back_lintel_1",
+        "plane": "back",
+        "horizontal_range_m": [
+          4.18,
+          4.503900141576422
+        ],
+        "z_range_m": [
+          2.57,
+          3.3
+        ],
+        "surface_midpoint_xy_m": [
+          4.3419500707882115,
+          0.23969233406096577
+        ],
+        "outward_normal_xy": [
+          0.0042117228521278294,
+          0.9999911306559759
+        ],
+        "thickness_m": 0.04,
+        "backing_m": 0.1
+      },
+      {
+        "name": "back_glass_1",
+        "plane": "back",
+        "horizontal_range_m": [
+          4.18,
+          4.503900141576422
+        ],
+        "z_range_m": [
+          0.58,
+          2.57
+        ],
+        "surface_midpoint_xy_m": [
+          4.3419500707882115,
+          0.23969233406096577
+        ],
+        "outward_normal_xy": [
+          0.0042117228521278294,
+          0.9999911306559759
+        ],
+        "thickness_m": 0.012,
+        "backing_m": 0
+      },
+      {
+        "name": "back_transom_1",
+        "plane": "back",
+        "horizontal_range_m": [
+          4.18,
+          4.503900141576422
+        ],
+        "z_range_m": [
+          2.14,
+          2.18
+        ],
+        "surface_midpoint_xy_m": [
+          4.3419500707882115,
+          0.23969233406096577
+        ],
+        "outward_normal_xy": [
+          0.0042117228521278294,
+          0.9999911306559759
+        ],
+        "thickness_m": 0.04,
+        "backing_m": 0
+      },
+      {
+        "name": "right_solid",
+        "plane": "right",
+        "horizontal_range_m": [
+          -5.18,
+          -2.02
+        ],
+        "z_range_m": [
+          0,
+          3.3
+        ],
+        "surface_midpoint_xy_m": [
+          4.513295100325663,
+          -3.5999999999999996
+        ],
+        "outward_normal_xy": [
+          0.999996594722259,
+          0.002609701876887898
+        ],
+        "thickness_m": 0.04,
+        "backing_m": 0.1
+      },
+      {
+        "name": "right_sill",
+        "plane": "right",
+        "horizontal_range_m": [
+          -2.02,
+          0.27
+        ],
+        "z_range_m": [
+          0,
+          0.56
+        ],
+        "surface_midpoint_xy_m": [
+          4.50618363849464,
+          -0.875
+        ],
+        "outward_normal_xy": [
+          0.999996594722259,
+          0.002609701876887898
+        ],
+        "thickness_m": 0.04,
+        "backing_m": 0.1
+      },
+      {
+        "name": "right_lintel",
+        "plane": "right",
+        "horizontal_range_m": [
+          -2.02,
+          0.27
+        ],
+        "z_range_m": [
+          2.57,
+          3.3
+        ],
+        "surface_midpoint_xy_m": [
+          4.50618363849464,
+          -0.875
+        ],
+        "outward_normal_xy": [
+          0.999996594722259,
+          0.002609701876887898
+        ],
+        "thickness_m": 0.04,
+        "backing_m": 0.1
+      },
+      {
+        "name": "right_glass",
+        "plane": "right",
+        "horizontal_range_m": [
+          -2.02,
+          0.27
+        ],
+        "z_range_m": [
+          0.56,
+          2.57
+        ],
+        "surface_midpoint_xy_m": [
+          4.50618363849464,
+          -0.875
+        ],
+        "outward_normal_xy": [
+          0.999996594722259,
+          0.002609701876887898
+        ],
+        "thickness_m": 0.012,
+        "backing_m": 0
+      },
+      {
+        "name": "right_transom",
+        "plane": "right",
+        "horizontal_range_m": [
+          -2.02,
+          0.27
+        ],
+        "z_range_m": [
+          2.15,
+          2.19
+        ],
+        "surface_midpoint_xy_m": [
+          4.50618363849464,
+          -0.875
+        ],
+        "outward_normal_xy": [
+          0.999996594722259,
+          0.002609701876887898
+        ],
+        "thickness_m": 0.04,
+        "backing_m": 0
+      },
+      {
+        "name": "right_mullion_0",
+        "plane": "right",
+        "horizontal_range_m": [
+          -1.23,
+          -1.13
+        ],
+        "z_range_m": [
+          0.56,
+          2.57
+        ],
+        "surface_midpoint_xy_m": [
+          4.506979600277562,
+          -1.18
+        ],
+        "outward_normal_xy": [
+          0.999996594722259,
+          0.002609701876887898
+        ],
+        "thickness_m": 0.04,
+        "backing_m": 0
+      },
+      {
+        "name": "right_mullion_1",
+        "plane": "right",
+        "horizontal_range_m": [
+          -0.39999999999999997,
+          -0.3
+        ],
+        "z_range_m": [
+          0.56,
+          2.57
+        ],
+        "surface_midpoint_xy_m": [
+          4.50481354034371,
+          -0.35
+        ],
+        "outward_normal_xy": [
+          0.999996594722259,
+          0.002609701876887898
+        ],
+        "thickness_m": 0.04,
+        "backing_m": 0
+      },
+      {
+        "name": "divider_lower",
+        "plane": "divider",
+        "horizontal_range_m": [
+          -5.3,
+          -1.76
+        ],
+        "z_range_m": [
+          0,
+          0.7
+        ],
+        "surface_midpoint_xy_m": [
+          -2.3320203416836054,
+          -3.53
+        ],
+        "outward_normal_xy": [
+          -0.9999999732619722,
+          0.00023124890191523418
+        ],
+        "thickness_m": 0.05,
+        "backing_m": 0
+      },
+      {
+        "name": "divider_blue",
+        "plane": "divider",
+        "horizontal_range_m": [
+          -5.3,
+          -1.76
+        ],
+        "z_range_m": [
+          0.7,
+          1.31
+        ],
+        "surface_midpoint_xy_m": [
+          -2.3320203416836054,
+          -3.53
+        ],
+        "outward_normal_xy": [
+          -0.9999999732619722,
+          0.00023124890191523418
+        ],
+        "thickness_m": 0.05,
+        "backing_m": 0
+      },
+      {
+        "name": "divider_cap",
+        "plane": "divider",
+        "horizontal_range_m": [
+          -5.3,
+          -1.76
+        ],
+        "z_range_m": [
+          1.31,
+          1.35
+        ],
+        "surface_midpoint_xy_m": [
+          -2.3320203416836054,
+          -3.53
+        ],
+        "outward_normal_xy": [
+          -0.9999999732619722,
+          0.00023124890191523418
+        ],
+        "thickness_m": 0.05,
+        "backing_m": 0
+      }
+    ],
+    "openings": [
+      {
+        "name": "left_entry",
+        "plane": "divider",
+        "horizontal_range_m": [
+          -1.76,
+          0.27
+        ],
+        "z_range_m": [
+          0,
+          3.3
+        ],
+        "kind": "open connection"
+      },
+      {
+        "name": "front_connection",
+        "y": -5.3,
+        "x_range_m": [
+          -2.35,
+          4.5
+        ],
+        "kind": "open scope boundary into the rest of the lab"
+      },
+      {
+        "name": "back_windows",
+        "plane": "back",
+        "horizontal_ranges_m": [
+          [
+            1.9,
+            2.28
+          ],
+          [
+            4.18,
+            4.503900141576422
+          ]
+        ],
+        "z_range_m": [
+          0.58,
+          2.57
+        ],
+        "kind": "fixed glazing; not a traversable doorway"
+      },
+      {
+        "name": "right_windows",
+        "plane": "right",
+        "horizontal_range_m": [
+          -2.02,
+          0.27
+        ],
+        "z_range_m": [
+          0.56,
+          2.57
+        ],
+        "kind": "fixed glazing; not a traversable doorway"
+      }
+    ],
+    "uncertainties": [
+      "Surface fits use Gaussian centers, with outliers and missing texture; residuals are not survey accuracy.",
+      "Window edges, divider endpoints and 3.30 m upper termination are orthographic scan estimates.",
+      "Wall/backing thickness and glazing material are inferred; backing extends outside the room.",
+      "No full apartment, ceiling, door articulation, furnishings or overhead beams are reconstructed.",
+      "White-wall continuity between windows is inferred from the scan; no unverified door opening is inserted."
+    ],
+    "wall_spec_sha256": "bfcff1feb8bea0ef13f028dc359828a2f6fbdbb7c3467cdc2e2522a24cf63e24"
+  }
+}

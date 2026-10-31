@@ -407,7 +407,7 @@ def sample_kitchen_object_helper(
 
                 # don't include if category not represented in any registry
                 cat_in_any_reg = np.any(
-                    [reg in OBJ_CATEGORIES[cat] for reg in obj_registries]
+                    [reg in OBJ_CATEGORIES[cat] and bool(OBJ_CATEGORIES[cat][reg].mjcf_paths) for reg in obj_registries]
                 )
                 if not cat_in_any_reg:
                     continue
@@ -437,6 +437,8 @@ def sample_kitchen_object_helper(
 
                 valid_categories.append(cat)
 
+        if not valid_categories:
+            raise ValueError(f"No installed object assets satisfy groups={groups}, registries={obj_registries}")
         cat = rng.choice(valid_categories)
 
         choices = {reg: [] for reg in obj_registries}

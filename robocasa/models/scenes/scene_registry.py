@@ -73,6 +73,9 @@ class LayoutType(IntEnum):
     LAYOUT059 = 59
     LAYOUT060 = 60
 
+    LAYOUT100 = 100
+    LAB_APT = LAYOUT100
+
     # negative values correspond to groups (see LAYOUT_GROUPS_TO_IDS)
     TEST = -1
     TRAIN = -2
@@ -180,6 +183,9 @@ def get_layout_path(layout_id):
     Return:
         str: yaml path for specified layout
     """
+    if layout_id in ("lab_apt", "LAB_APT", "layout100", "LAYOUT100"):
+        layout_id = LayoutType.LAYOUT100
+
     if (
         isinstance(layout_id, int)
         or isinstance(layout_id, np.int64)
@@ -195,7 +201,7 @@ def get_layout_path(layout_id):
         raise ValueError
 
     layout_num = int(re.findall(r"\d+", layout_name)[0])
-    is_test_layout = 1 <= layout_num <= 10
+    is_test_layout = 1 <= layout_num <= 10 or layout_num == LayoutType.LAYOUT100
     layout_folder = "test" if is_test_layout else "train"
     return xml_path_completion(
         f"scenes/kitchen_layouts/{layout_folder}/{layout_name}.yaml",
@@ -248,7 +254,7 @@ def unpack_layout_ids(layout_ids):
         if isinstance(id, dict):
             all_layout_ids.append(id)
         else:
-            id = int(id)
+            id = int(LayoutType.LAB_APT) if id in ("lab_apt", "LAB_APT", "layout100", "LAYOUT100") else int(id)
             if id < 0:
                 all_layout_ids += LAYOUT_GROUPS_TO_IDS[id]
             else:

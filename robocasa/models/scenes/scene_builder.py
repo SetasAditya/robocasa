@@ -9,8 +9,21 @@ from robocasa.models.scenes.scene_registry import get_layout_path, get_style_pat
 from robocasa.models.scenes.scene_utils import *
 from robocasa.models.fixtures import *
 
+from robocasa.models.fixtures.labapt import (
+    LabAptSingleCabinet,
+    LabAptHingeCabinet,
+    LabAptOpenShelf,
+    LabAptCounter,
+    LabAptFridge,
+)
+
 # fixture string to class
 FIXTURES = dict(
+    labapt_fridge=LabAptFridge,
+    labapt_counter=LabAptCounter,
+    labapt_open_cabinet=LabAptOpenShelf,
+    labapt_single_cabinet=LabAptSingleCabinet,
+    labapt_hinge_cabinet=LabAptHingeCabinet,
     hinge_cabinet=HingeCabinet,
     single_cabinet=SingleCabinet,
     open_cabinet=OpenCabinet,

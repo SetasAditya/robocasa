@@ -1,0 +1,375 @@
+{
+  "schema_version": 1,
+  "layout_id": 100,
+  "layout_name": "LAB_APT",
+  "meters_per_unit": 1,
+  "up_axis": "Z",
+  "scan_to_layout": {
+    "rotation_matrix": [
+      [
+        0.7648421872844885,
+        0.644217687237691,
+        0.0
+      ],
+      [
+        -0.644217687237691,
+        0.7648421872844885,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "translation": [
+      -0.2902413464291356,
+      -3.1817049958935595,
+      1.11
+    ]
+  },
+  "floor_z_in_scan": -1.11,
+  "fixtures": [
+    {
+      "name": "left_base",
+      "type": "labapt_single_cabinet",
+      "position_m": [
+        -1.256,
+        -0.077,
+        0.478
+      ],
+      "dimensions_m": [
+        0.3639999999999999,
+        0.6,
+        0.76
+      ],
+      "source": "cabinet_pipeline/prepared_006/asset_metadata.json",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "sink_cabinet",
+      "type": "labapt_hinge_cabinet",
+      "position_m": [
+        -0.687,
+        -0.077,
+        0.37849999999999995
+      ],
+      "dimensions_m": [
+        0.746,
+        0.6,
+        0.561
+      ],
+      "source": "cabinet_pipeline/prepared_006/asset_metadata.json",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "pantry",
+      "type": "labapt_hinge_cabinet",
+      "position_m": [
+        -1.8275,
+        -0.077,
+        0.974
+      ],
+      "dimensions_m": [
+        0.765,
+        0.6,
+        1.752
+      ],
+      "source": "labapt_points.npz: kitchen front projection x=[-2.21,-1.445],z=[-.787,.965]",
+      "geometry_status": "scan projection estimate",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "sink_fascia",
+      "type": "box",
+      "position_m": [
+        -0.687,
+        -0.377,
+        0.7585
+      ],
+      "dimensions_m": [
+        0.746,
+        0.018,
+        0.199
+      ],
+      "source": "cabinet_pipeline: fascia between sink doors and countertop",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "drawer_0",
+      "type": "drawer",
+      "position_m": [
+        0.51,
+        -0.077,
+        0.19900000000000007
+      ],
+      "dimensions_m": [
+        0.39,
+        0.6,
+        0.20200000000000007
+      ],
+      "source": "labapt_points.npz: four drawer seams; cabinet collision envelope",
+      "geometry_status": "scan projection estimate",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "drawer_1",
+      "type": "drawer",
+      "position_m": [
+        0.51,
+        -0.077,
+        0.395
+      ],
+      "dimensions_m": [
+        0.39,
+        0.6,
+        0.18999999999999995
+      ],
+      "source": "labapt_points.npz: four drawer seams; cabinet collision envelope",
+      "geometry_status": "scan projection estimate",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "drawer_2",
+      "type": "drawer",
+      "position_m": [
+        0.51,
+        -0.077,
+        0.585
+      ],
+      "dimensions_m": [
+        0.39,
+        0.6,
+        0.19000000000000003
+      ],
+      "source": "labapt_points.npz: four drawer seams; cabinet collision envelope",
+      "geometry_status": "scan projection estimate",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "drawer_3",
+      "type": "drawer",
+      "position_m": [
+        0.51,
+        -0.077,
+        0.769
+      ],
+      "dimensions_m": [
+        0.39,
+        0.6,
+        0.178
+      ],
+      "source": "labapt_points.npz: four drawer seams; cabinet collision envelope",
+      "geometry_status": "scan projection estimate",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "dishwasher",
+      "type": "dishwasher",
+      "position_m": [
+        0.006,
+        -0.05,
+        0.47000000000000003
+      ],
+      "dimensions_m": [
+        0.58,
+        0.57,
+        0.76
+      ],
+      "source": "robolab/scene_replacement/cabinets.py: obstacle_dishwasher",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "sink",
+      "type": "sink",
+      "position_m": [
+        -0.72,
+        -0.015,
+        0.885
+      ],
+      "dimensions_m": [
+        0.6,
+        0.43,
+        0.15
+      ],
+      "source": "robolab/scene_replacement/cabinets.py: sink_envelope; faucet height inferred",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "sink_counter",
+      "type": "labapt_counter",
+      "position_m": [
+        -0.875,
+        -0.077,
+        0.87
+      ],
+      "dimensions_m": [
+        1.15,
+        0.6,
+        0.03
+      ],
+      "source": "cabinet front and countertop bounds",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "dish_rack",
+      "type": "dish_rack",
+      "position_m": [
+        -1.25,
+        -0.1,
+        1.01
+      ],
+      "dimensions_m": [
+        0.3,
+        0.25,
+        0.25
+      ],
+      "source": "labapt_points.npz: visible black dish rack left of sink",
+      "geometry_status": "scan projection estimate",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "appliance_counter",
+      "type": "labapt_counter",
+      "position_m": [
+        0.21,
+        -0.077,
+        0.87
+      ],
+      "dimensions_m": [
+        1.0,
+        0.6,
+        0.03
+      ],
+      "source": "robolab/scene_replacement/cabinets.py: dishwasher/drawer span",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "wall_shelf_0",
+      "type": "labapt_open_cabinet",
+      "position_m": [
+        -0.31,
+        0.1,
+        1.385
+      ],
+      "dimensions_m": [
+        1.84,
+        0.26,
+        0.035
+      ],
+      "source": "labapt_points.npz: shelf projection",
+      "geometry_status": "scan projection estimate",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "wall_shelf_1",
+      "type": "labapt_open_cabinet",
+      "position_m": [
+        -0.31,
+        0.1,
+        1.8050000000000002
+      ],
+      "dimensions_m": [
+        1.84,
+        0.26,
+        0.035
+      ],
+      "source": "labapt_points.npz: shelf projection",
+      "geometry_status": "scan projection estimate",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "microwave",
+      "type": "microwave",
+      "position_m": [
+        0.45,
+        0.060000000000000005,
+        1.0175
+      ],
+      "dimensions_m": [
+        0.45,
+        0.35,
+        0.265
+      ],
+      "source": "microwave_refinement/final_build_v2/manifest.resolved.json",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "fridge",
+      "type": "labapt_fridge",
+      "position_m": [
+        1.47164647153443,
+        -0.24867972178134423,
+        0.8399999999999999
+      ],
+      "dimensions_m": [
+        0.72,
+        0.76,
+        1.68
+      ],
+      "source": "fridge_replacement/closed.usda + asset_build_report.json",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "dining_black_table",
+      "type": "counter",
+      "position_m": [
+        -0.15201364585952962,
+        -3.5443788279596142,
+        0.435
+      ],
+      "dimensions_m": [
+        3.05,
+        0.9,
+        0.87
+      ],
+      "source": "table_replacement/replaced.usda + README.txt",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    },
+    {
+      "name": "air_fryer",
+      "type": "box",
+      "position_m": [
+        0,
+        0,
+        1.0150000000000001
+      ],
+      "dimensions_m": [
+        0.27,
+        0.265,
+        0.26
+      ],
+      "source": "configs/scene_replacement/labapt_air_fryer_tray.json",
+      "geometry_status": "scan fitted",
+      "mechanism_status": "native RoboCasa functional substitute; hidden geometry inferred"
+    }
+  ],
+  "optional_fixtures": {
+    "dish_rack": "Native tasks enable it by name; fixed scan-estimated pose."
+  },
+  "source_hashes": {
+    "output/xgrids2_lab/cabinet_pipeline/prepared_006/asset_metadata.json": "55e028a4073e15129370fc0358eb79cb971da81ed4783993f1ab1438a952c3d4",
+    "output/xgrids2_lab/fridge_replacement/closed.usda": "b019a4c48e26a18e6f6144b90a843601b28e6c80f7fe404981e3877a0101b2b1",
+    "output/xgrids2_lab/fridge_replacement/asset_build_report.json": "425a664015aa7f84bbbbb53a43b1376d8a9affdfed07471a942be2e0e0879183",
+    "output/xgrids2_lab/table_replacement/replaced.usda": "935c92828735378a15749b60399b4c9b0c39f03113b762cd3af763f7287d714a",
+    "output/xgrids2_lab/microwave_refinement/final_build_v2/manifest.resolved.json": "04dd83e1fb8387672169b85c9a3e1d602272f55c886dcb89e932d3b9d72b9548"
+  },
+  "limitations": [
+    "Functional procedural/native substitutes, not exact manufacturer reconstructions.",
+    "Pantry and drawer bounds estimated from metric scan projection; interiors and dynamics inferred.",
+    "Room shell currently covers the kitchen working area, not the full apartment.",
+    "No separate oven verified in the source kitchen.",
+    "Air fryer is a fixed obstacle; no native air-fryer task capability claimed.",
+    "Source scan uncertainty is separate from numeric export precision."
+  ]
+}

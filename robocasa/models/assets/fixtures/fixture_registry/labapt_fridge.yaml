@@ -1,0 +1,2 @@
+default:
+  xml: fixtures/labapt/fridge/model.xml

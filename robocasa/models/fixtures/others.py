@@ -242,6 +242,8 @@ class Wall(BoxObject):
         Returns:
             list: quaternion
         """
+        if self.wall_side is None:
+            return s2a(self._obj.get("quat", "1 0 0 0")).tolist()
         side_rots = {
             "back": [-0.707, 0.707, 0, 0],
             "front": [0, 0, 0.707, -0.707],
@@ -298,6 +300,18 @@ class Wall(BoxObject):
             list: 4 or 8 points
         """
         reg_halfsize = self.get_bounding_box_half_size()
+        if self.wall_side is None and not relative:
+            # Explicit-quaternion walls need oriented horizontal edges and a
+            # vertical pz edge. Sign-based axis sorting loses corners on long,
+            # slightly rotated scan-fitted walls.
+            x, height, depth = reg_halfsize
+            offsets = [[-x,height,-depth],[x,height,-depth],
+                       [-x,height,depth],[-x,-height,-depth],
+                       [x,height,depth],[x,-height,-depth],
+                       [-x,-height,depth],[x,-height,depth]]
+            sites = [self._get_pos_after_rel_tranformation(o, np.asarray(self.get_quat())) for o in offsets]
+            return sites if all_points else sites[:4]
+
         p0 = [-reg_halfsize[0], -reg_halfsize[1], -reg_halfsize[2]]
         px = [reg_halfsize[0], -reg_halfsize[1], -reg_halfsize[2]]
         py = [-reg_halfsize[0], reg_halfsize[1], -reg_halfsize[2]]

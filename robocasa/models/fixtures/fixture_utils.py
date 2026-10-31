@@ -103,7 +103,7 @@ def fixture_is_type(fixture, fixture_type):
 
         # check that there are valid reset regions
         reset_regions = fixture.get_reset_regions(
-            z_range=(1.0, 1.50)
+            z_range=getattr(fixture, "task_selection_z_range", (1.0, 1.50))
         )  # find reset regions within bounds
         if len(reset_regions) > 0:
             return True

@@ -821,6 +821,12 @@ def compute_robot_base_placement_pose(env, ref_fixture, ref_object=None, offset=
     elif face_dir == 2:
         robot_base_ori[2] = ground_fixture.rot + np.pi
 
+    if getattr(env, "layout_id", None) == 100 and ref_fixture.name in (
+        "left_base_labapt", "sink_cabinet_labapt", "sink_counter_labapt",
+        "appliance_counter_labapt", "wall_shelf_0_labapt", "wall_shelf_1_labapt"
+    ):
+        # Leave clearance for the scanned low cabinet doors at reset.
+        robot_base_pos[:2] += .18 * np.array([np.sin(ref_fixture.rot), -np.cos(ref_fixture.rot)])
     return robot_base_pos, robot_base_ori
 
 
@@ -1239,6 +1245,11 @@ def _get_placement_initializer(env, cfg_list, z_offset=0.01):
                 (outer_size[1] / 2 - inner_size[1] / 2) * inner_ypos + offset[1],
             )
 
+            # Clip native task offsets to measured LabApt support regions.
+            if getattr(env, "layout_id", None) == 100:
+                limit = np.maximum(0, (np.asarray(outer_size) - np.asarray(inner_size)) / 2)
+                intra_offset = tuple(np.clip(intra_offset, -limit, limit))
+
             # center surface point of entire region
             ref_pos = fixture.pos + [0, 0, reset_region["offset"][2]]
             ref_rot = fixture.rot
@@ -1470,25 +1481,36 @@ def create_obj(env, cfg):
         elif fixture_is_type(ref_fixture, FixtureType.FRIDGE):
             fridgable = True
 
-    object_kwargs, object_info = env.sample_object(
-        obj_groups,
-        exclude_groups=exclude_obj_groups,
-        graspable=graspable,
-        washable=washable,
-        microwavable=microwavable,
-        cookable=cookable,
-        fridgable=fridgable,
-        freezable=freezable,
-        dishwashable=dishwashable,
-        max_size=cfg.get("max_size", (None, None, None)),
-        object_scale=cfg.get("object_scale", None),
-        rotate_upright=cfg.get("rotate_upright", False),
+    labapt_microwave = (
+        getattr(env, "layout_id", None) == 100
+        and "placement" in cfg
+        and "fixture" in cfg["placement"]
+        and fixture_is_type(cfg["placement"]["fixture"], FixtureType.MICROWAVE)
     )
-    info = object_info
+    # Filter catalog objects at their native size; do not shrink objects or the room.
+    for fit_attempt in range(40 if labapt_microwave else 1):
+        object_kwargs, object_info = env.sample_object(
+            obj_groups,
+            exclude_groups=exclude_obj_groups,
+            graspable=graspable,
+            washable=washable,
+            microwavable=microwavable,
+            cookable=cookable,
+            fridgable=fridgable,
+            freezable=freezable,
+            dishwashable=dishwashable,
+            max_size=cfg.get("max_size", (None, None, None)),
+            object_scale=cfg.get("object_scale", None),
+            rotate_upright=cfg.get("rotate_upright", False),
+        )
 
-    object = MJCFObject(name=cfg["name"], **object_kwargs)
+        object = MJCFObject(name=cfg["name"], **object_kwargs)
+        if not labapt_microwave or np.all(np.asarray(object.size) <= [.32, .28, .195]):
+            return object, object_info
+        if "info" in cfg:
+            raise ValueError("Recorded object does not fit the LabApt microwave cavity")
+    raise ValueError("No fitting native-size microwave asset found in 40 catalog samples")
 
-    return object, info
 
 
 @contextlib.contextmanager

@@ -1,0 +1,47 @@
+<mujoco model="labapt_microwave">
+  <compiler angle="radian" />
+  <asset>
+    <texture name="face" type="2d" file="microwave_door.png" />
+    <material name="face" texture="face" />
+    <texture name="keypad" type="2d" file="microwave_keypad.png" />
+    <material name="keypad" texture="keypad" />
+  </asset>
+  <worldbody>
+    <body>
+      <body name="object">
+        <body name="door" pos="-0.225 -0.175 0">
+          <joint name="microjoint" type="hinge" axis="0 0 1" range="-1.919862177 0" limited="true" damping=".05" frictionloss=".02" />
+          <geom name="door_panel" group="0" rgba="0 0 0 0" density="300" type="box" pos=".1875 -.012 0" size="0.1875 0.008999999613 0.1264999956" />
+          <geom name="door_panel_visual" group="1" rgba="0.04500000179 0.04300000146 0.04300000146 1" contype="0" conaffinity="0" mass="0" type="box" pos="0.1875 0 0" size="0.1875 0.008999999613 0.1264999956" />
+          <geom name="door_post_n0_065" group="0" rgba="0 0 0 0" density="300" type="box" pos="0.34 -0.045 -0.065" size="0.007000000216 0.03750000149 0.007000000216" />
+          <geom name="door_post_n0_065_visual" group="1" rgba="0.0549999997 0.05200000107 0.05200000107 1" contype="0" conaffinity="0" mass="0" type="box" pos="0.34 -0.045 -0.065" size="0.007000000216 0.03750000149 0.007000000216" />
+          <geom name="door_post_0_065" group="0" rgba="0 0 0 0" density="300" type="box" pos="0.34 -0.045 0.065" size="0.007000000216 0.03750000149 0.007000000216" />
+          <geom name="door_post_0_065_visual" group="1" rgba="0.0549999997 0.05200000107 0.05200000107 1" contype="0" conaffinity="0" mass="0" type="box" pos="0.34 -0.045 0.065" size="0.007000000216 0.03750000149 0.007000000216" />
+          <geom name="door_handle_main" group="0" rgba="0 0 0 0" density="300" type="box" pos="0.34 -0.085 0" size="0.008999999613 0.009999999776 0.07249999791" />
+          <geom name="door_handle_main_visual" group="1" rgba="0.07500000298 0.07699999958 0.07800000161 1" contype="0" conaffinity="0" mass="0" type="box" pos="0.34 -0.085 0" size="0.008999999613 0.009999999776 0.07249999791" />
+          <geom name="face_scan" type="box" pos="0.1875 -0.02 0" size="0.184 0.0005 0.129" group="1" material="face" contype="0" conaffinity="0" mass="0" />
+        </body>
+        <geom name="body_bottom" group="0" rgba="0 0 0 0" density="300" type="box" pos="0 0 -0.12" size="0.224999994 0.174999997 0.01250000019" />
+        <geom name="body_bottom_visual" group="1" rgba="0.0549999997 0.05200000107 0.05200000107 1" contype="0" conaffinity="0" mass="0" type="box" pos="0 0 -0.12" size="0.224999994 0.174999997 0.01250000019" />
+        <geom name="body_top" group="0" rgba="0 0 0 0" density="300" type="box" pos="0 0 0.12" size="0.224999994 0.174999997 0.01250000019" />
+        <geom name="body_top_visual" group="1" rgba="0.0549999997 0.05200000107 0.05200000107 1" contype="0" conaffinity="0" mass="0" type="box" pos="0 0 0.12" size="0.224999994 0.174999997 0.01250000019" />
+        <geom name="body_left" group="0" rgba="0 0 0 0" density="300" type="box" pos="-0.2125 0 0" size="0.01250000019 0.174999997 0.1075000018" />
+        <geom name="body_left_visual" group="1" rgba="0.0549999997 0.05200000107 0.05200000107 1" contype="0" conaffinity="0" mass="0" type="box" pos="-0.2125 0 0" size="0.01250000019 0.174999997 0.1075000018" />
+        <geom name="body_right" group="0" rgba="0 0 0 0" density="300" type="box" pos="0.2125 0 0" size="0.01250000019 0.174999997 0.1075000018" />
+        <geom name="body_right_visual" group="1" rgba="0.0549999997 0.05200000107 0.05200000107 1" contype="0" conaffinity="0" mass="0" type="box" pos="0.2125 0 0" size="0.01250000019 0.174999997 0.1075000018" />
+        <geom name="body_back" group="0" rgba="0 0 0 0" density="300" type="box" pos="0 0.1625 0" size="0.200000003 0.01250000019 0.1075000018" />
+        <geom name="body_back_visual" group="1" rgba="0.0549999997 0.05200000107 0.05200000107 1" contype="0" conaffinity="0" mass="0" type="box" pos="0 0.1625 0" size="0.200000003 0.01250000019 0.1075000018" />
+        <geom name="body_controls" group="0" rgba="0 0 0 0" density="300" type="box" pos="0.18 -0.155 0" size="0.03249999881 0.01999999955 0.1075000018" />
+        <geom name="body_controls_visual" group="1" rgba="0.0549999997 0.05200000107 0.05200000107 1" contype="0" conaffinity="0" mass="0" type="box" pos="0.18 -0.155 0" size="0.03249999881 0.01999999955 0.1075000018" />
+        <geom name="start_button" type="box" pos="0.18 -0.178 -0.0775" size=".012 .003 .008" rgba=".1 .1 .1 1" group="1" />
+        <geom name="stop_button" type="box" pos="0.18 -0.178 -0.0475" size=".012 .003 .008" rgba=".1 .1 .1 1" group="1" />
+        <geom name="reg_main" type="box" pos="0 0 0" size="0.225 0.175 0.1325" group="1" rgba="0 1 0 0" contype="0" conaffinity="0" mass="0" />
+        <geom name="reg_tray" type="box" pos="-0.03 0 -1.387778781e-17" size="0.17 0.15 0.1075" group="1" rgba="0 1 0 0" contype="0" conaffinity="0" mass="0" />
+        <geom name="keypad_scan" type="box" pos="0.18 -0.18 0" size="0.031 0.0005 0.105" group="1" material="keypad" contype="0" conaffinity="0" mass="0" />
+      </body>
+      <site name="bottom_site" pos="0 0 -0.1325" size=".001" rgba="0 0 0 0" />
+      <site name="top_site" pos="0 0 0.1325" size=".001" rgba="0 0 0 0" />
+      <site name="horizontal_radius_site" pos="0.225 0.175 0" size=".001" rgba="0 0 0 0" />
+    </body>
+  </worldbody>
+</mujoco>

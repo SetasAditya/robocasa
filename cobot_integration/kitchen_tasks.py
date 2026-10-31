@@ -15,6 +15,13 @@ def environment_config(task,seed,layout=1,style=1,render=False,images=False,imag
     Paired collection injects its calibrated simulation wrist camera separately;
     images=True uses legacy native observations and is not that camera contract.
     """
+    if layout in ('LAB_APT', 'lab_apt', 'LAYOUT100', 'layout100'):
+        layout = 100
+    task = {
+        'fetch_surface': 'KitchenFetchSurface',
+        'bin_placement': 'KitchenBinPlacement',
+        'collect_two_stations': 'KitchenCollectTwoStations',
+    }.get(task, task)
     from cobot import controller_config
     import cobot_fourbar  # Robot and physical linked hand registration.
     cfg=controller_config()
@@ -45,6 +52,11 @@ class KitchenFetchSurface(Kitchen):
         super()._setup_kitchen_references()
         self.source=self.register_fixture_ref('source',dict(id=FixtureType.DINING_COUNTER))
         candidates=[f for f in self.fixtures.values() if 'Counter' in type(f).__name__ and f is not self.source and np.linalg.norm(np.asarray(f.pos)[:2]-np.asarray(self.source.pos)[:2])>.8]
+        if self.layout_id == 100 and isinstance(self, KitchenBinPlacement):
+            candidates = [f for f in candidates if any(
+                r['size'][0] > .38 and r['size'][1] > .38
+                for r in f.get_reset_regions(self).values()
+            )]
         if not candidates:raise ValueError('No distinct counter at least .8m from dining counter')
         target=sorted(candidates,key=lambda f:np.linalg.norm(np.asarray(f.pos)[:2]-np.asarray(self.source.pos)[:2]))[0]
         self.target=self.register_fixture_ref('target',dict(id=target.name))
@@ -136,3 +148,11 @@ class KitchenCollectTwoStations(KitchenBinPlacement):
         meta=super().get_ep_meta();meta['lang']=f'Collect the {self.get_obj_lang("obj")} from the dining table and the {self.get_obj_lang("obj_second")} from the kitchen counter into the blue bin.'
         meta['task_extension']='KitchenCollectTwoStations on native dining and kitchen counter'
         return meta
+
+
+def make_env(task, seed, layout=1, style=1, render=False, images=False, **overrides):
+    """Construct a native or supported surface/bin task with shared CoBot settings."""
+    import robosuite as suite
+    return suite.make(**environment_config(
+        task, seed, layout, style, render=render, images=images, **overrides
+    ))

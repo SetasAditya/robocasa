@@ -1,0 +1,387 @@
+# LabApt: measured held-out kitchen (LayoutType.LAYOUT100 / LAB_APT).
+# Geometry and appearance are fixed; native tasks randomize movable objects.
+labapt:
+  fixtures:
+    - name: left_base
+      type: labapt_single_cabinet
+      pos: [-1.256, -0.077, 0.478]
+      size: [0.3639999999999999, 0.6, 0.76]
+      orientation: left
+      texture: textures/wood/gray_wood_grain.png
+      panel_type: slab
+      panel_config:
+        handle_vpos: top
+        handle_vpercent: 0.3409090909090909
+        handle_hpercent: 0.7747252747252747
+      thickness: 0.018
+      door_gap: 0
+      num_levels: 2
+      handle_config:
+        length: 0.144
+        texture: textures/flat/black.png
+    - name: sink_cabinet
+      type: labapt_hinge_cabinet
+      pos: [-0.687, -0.077, 0.37849999999999995]
+      size: [0.746, 0.6, 0.561]
+      texture: textures/wood/gray_wood_grain.png
+      panel_type: slab
+      panel_config:
+        handle_vpos: top
+        handle_vpercent: 0.5035971223021583
+      thickness: 0.018
+      door_gap: 0.005
+      num_levels: 1
+      handle_config:
+        length: 0.144
+        texture: textures/flat/black.png
+    - name: pantry
+      type: labapt_hinge_cabinet
+      pos: [-1.8275, -0.077, 0.974]
+      size: [0.765, 0.6, 1.752]
+      texture: textures/wood/gray_wood_grain.png
+      panel_type: slab
+      panel_config:
+        handle_vpos: top
+        handle_vpercent: 0.06343283582089551
+      handle_config:
+        length: 0.144
+        texture: textures/flat/black.png
+      thickness: 0.018
+      num_levels: 4
+    - name: sink_fascia
+      type: box
+      pos: [-0.687, -0.377, 0.7585]
+      size: [0.746, 0.018, 0.199]
+      texture: textures/wood/gray_wood_grain.png
+    - name: drawer_0
+      type: drawer
+      pos: [0.51, -0.077, 0.19900000000000007]
+      size: [0.39, 0.6, 0.20200000000000007]
+      texture: textures/wood/gray_wood_grain.png
+      panel_type: slab
+      thickness: 0.015
+      door_gap: 0.004
+    - name: drawer_1
+      type: drawer
+      pos: [0.51, -0.077, 0.395]
+      size: [0.39, 0.6, 0.18999999999999995]
+      texture: textures/wood/gray_wood_grain.png
+      panel_type: slab
+      thickness: 0.015
+      door_gap: 0.004
+    - name: drawer_2
+      type: drawer
+      pos: [0.51, -0.077, 0.585]
+      size: [0.39, 0.6, 0.19000000000000003]
+      texture: textures/wood/gray_wood_grain.png
+      panel_type: slab
+      thickness: 0.015
+      door_gap: 0.004
+    - name: drawer_3
+      type: drawer
+      pos: [0.51, -0.077, 0.769]
+      size: [0.39, 0.6, 0.178]
+      texture: textures/wood/gray_wood_grain.png
+      panel_type: slab
+      thickness: 0.015
+      door_gap: 0.004
+    - name: dishwasher
+      type: dishwasher
+      pos: [0.006, -0.05, 0.47000000000000003]
+      size: [0.58, 0.57, 0.76]
+      xml: fixtures/dishwashers/Dishwasher031
+    - name: sink
+      type: sink
+      pos: [-0.72, -0.015, 0.885]
+      size: [0.6, 0.43, 0.15]
+      xml: fixtures/sinks/Sink001
+      max_size: [null, null, null]
+    - name: sink_counter
+      type: labapt_counter
+      pos: [-0.875, -0.077, 0.87]
+      size: [1.15, 0.6, 0.03]
+      interior_obj: sink
+      obj_x_percent: 0.6347826086956522
+      obj_y_percent: 0.5931623931623932
+      top_thickness: 0.03
+      overhang: 0
+      hollow: [true, true]
+      top_texture: textures/flat/white.png
+    - name: dish_rack
+      type: dish_rack
+      pos: [-1.25, -0.1, 1.01]
+      size: [0.3, 0.25, 0.25]
+      xml: objects/lightwheel/dish_rack/DishRack026
+      enable: false
+    - name: appliance_counter
+      type: labapt_counter
+      pos: [0.21, -0.077, 0.87]
+      size: [1.0, 0.6, 0.03]
+      top_thickness: 0.03
+      overhang: 0
+      hollow: [true, true]
+      top_texture: textures/flat/white.png
+    - name: wall_shelf_0
+      type: labapt_open_cabinet
+      pos: [-0.31, 0.1, 1.385]
+      size: [1.84, 0.26, 0.035]
+      texture: textures/flat/white.png
+      num_levels: 1
+      thickness: 0.008
+    - name: wall_shelf_1
+      type: labapt_open_cabinet
+      pos: [-0.31, 0.1, 1.8050000000000002]
+      size: [1.84, 0.26, 0.035]
+      texture: textures/flat/white.png
+      num_levels: 1
+      thickness: 0.008
+    - name: microwave
+      type: microwave
+      pos: [0.45, 0.060000000000000005, 1.0175]
+      size: [0.45, 0.35, 0.265]
+      xml: fixtures/labapt/microwave/model.xml
+    - name: fridge
+      type: labapt_fridge
+      pos: [1.47164647153443, -0.24867972178134423, 0.8399999999999999]
+      size: [0.72, 0.76, 1.68]
+      xml: fixtures/labapt/fridge/model.xml
+    - name: dining_black_table
+      type: counter
+      pos: [-0.15201364585952962, -3.5443788279596142, 0.435]
+      size: [3.05, 0.9, 0.87]
+      z_rot: 1.56876
+      top_thickness: 0.04
+      overhang: 0
+      hollow: [true, true]
+      top_texture: textures/wood/gray_wood_grain.png
+      base_texture: textures/flat/black.png
+    - name: air_fryer
+      type: box
+      pos: [0, 0, 1.0150000000000001]
+      size: [0.27, 0.265, 0.26]
+      texture: textures/flat/black.png
+room:
+  walls:
+    - name: back_red
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [-0.3249157655429574, 0.2793482312734514, 1.65]
+      size: [1.8850170736386784, 1.65, 0.02]
+      texture: textures/flat/labapt_red.png
+    - name: back_red_backing
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [-0.32462094494330845, 0.3493476104193697, 1.65]
+      size: [1.8850170736386784, 1.65, 0.05]
+      texture: textures/flat/light_gray.png
+    - name: back_pier_0
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [1.7500842344570426, 0.27060882884251936, 1.65]
+      size: [0.1100013304134034, 1.65, 0.02]
+      texture: textures/flat/white.png
+    - name: back_pier_0_backing
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [1.7503790550566916, 0.3406082079884377, 1.65]
+      size: [0.1100013304134034, 1.65, 0.05]
+      texture: textures/flat/light_gray.png
+    - name: back_sill_0
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [2.0900842344570423, 0.26917683037190887, 0.29]
+      size: [0.15000168519031104, 0.29, 0.02]
+      texture: textures/flat/white.png
+    - name: back_sill_0_backing
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [2.090379055056691, 0.3391762095178272, 0.29]
+      size: [0.15000168519031104, 0.29, 0.05]
+      texture: textures/flat/light_gray.png
+    - name: back_lintel_0
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [2.0900842344570423, 0.26917683037190887, 2.9349999999999996]
+      size: [0.15000168519031104, 0.365, 0.02]
+      texture: textures/flat/white.png
+    - name: back_lintel_0_backing
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [2.090379055056691, 0.3391762095178272, 2.9349999999999996]
+      size: [0.15000168519031104, 0.365, 0.05]
+      texture: textures/flat/light_gray.png
+    - name: back_glass_0
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [2.0900252703371125, 0.2551769545427252, 1.575]
+      size: [0.15000168519031104, 0.9949999999999999, 0.006]
+      texture: textures/flat/white.png
+    - name: back_transom_0
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [2.0900842344570423, 0.26917683037190887, 2.16]
+      size: [0.15000168519031104, 0.020000000000000018, 0.02]
+      texture: textures/flat/white.png
+    - name: back_pier_1
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [3.230084234457042, 0.2643754237351559, 1.65]
+      size: [0.9100084259515555, 1.65, 0.02]
+      texture: textures/flat/white.png
+    - name: back_pier_1_backing
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [3.230379055056691, 0.3343748028810742, 1.65]
+      size: [0.9100084259515555, 1.65, 0.05]
+      texture: textures/flat/light_gray.png
+    - name: back_sill_1
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [4.342034305245254, 0.2596921566740853, 0.29]
+      size: [0.12195150719184383, 0.29, 0.02]
+      texture: textures/flat/white.png
+    - name: back_sill_1_backing
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [4.342329125844903, 0.3296915358200036, 0.29]
+      size: [0.12195150719184383, 0.29, 0.05]
+      texture: textures/flat/light_gray.png
+    - name: back_lintel_1
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [4.342034305245254, 0.2596921566740853, 2.9349999999999996]
+      size: [0.12195150719184383, 0.365, 0.02]
+      texture: textures/flat/white.png
+    - name: back_lintel_1_backing
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [4.342329125844903, 0.3296915358200036, 2.9349999999999996]
+      size: [0.12195150719184383, 0.365, 0.05]
+      texture: textures/flat/light_gray.png
+    - name: back_glass_1
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [4.341975341125324, 0.24569228084490163, 1.575]
+      size: [0.12195150719184383, 0.9949999999999999, 0.006]
+      texture: textures/flat/white.png
+    - name: back_transom_1
+      type: wall
+      wall_side: null
+      quat: [0.7071052132914831, -0.7071052132914831, 0.0014890721963860248, -0.0014890721963860248]
+      pos: [4.342034305245254, 0.2596921566740853, 2.16]
+      size: [0.12195150719184383, 0.020000000000000018, 0.02]
+      texture: textures/flat/white.png
+    - name: right_solid
+      type: wall
+      wall_side: null
+      quat: [0.5006520003647463, -0.5006520003647463, 0.49934714831545596, -0.49934714831545596]
+      pos: [4.533295032220108, -3.599947805962462, 1.65]
+      size: [1.5400053803571523, 1.65, 0.02]
+      texture: textures/flat/white.png
+    - name: right_solid_backing
+      type: wall
+      wall_side: null
+      quat: [0.5006520003647463, -0.5006520003647463, 0.49934714831545596, -0.49934714831545596]
+      pos: [4.603294793850666, -3.5997651268310795, 1.65]
+      size: [1.5400053803571523, 1.65, 0.05]
+      texture: textures/flat/light_gray.png
+    - name: right_sill
+      type: wall
+      wall_side: null
+      quat: [0.5006520003647463, -0.5006520003647463, 0.49934714831545596, -0.49934714831545596]
+      pos: [4.526183570389086, -0.8749478059624622, 0.28]
+      size: [1.1050038990562907, 0.28, 0.02]
+      texture: textures/flat/white.png
+    - name: right_sill_backing
+      type: wall
+      wall_side: null
+      quat: [0.5006520003647463, -0.5006520003647463, 0.49934714831545596, -0.49934714831545596]
+      pos: [4.596183332019644, -0.8747651268310801, 0.28]
+      size: [1.1050038990562907, 0.28, 0.05]
+      texture: textures/flat/light_gray.png
+    - name: right_lintel
+      type: wall
+      wall_side: null
+      quat: [0.5006520003647463, -0.5006520003647463, 0.49934714831545596, -0.49934714831545596]
+      pos: [4.526183570389086, -0.8749478059624622, 2.9349999999999996]
+      size: [1.1050038990562907, 0.365, 0.02]
+      texture: textures/flat/white.png
+    - name: right_lintel_backing
+      type: wall
+      wall_side: null
+      quat: [0.5006520003647463, -0.5006520003647463, 0.49934714831545596, -0.49934714831545596]
+      pos: [4.596183332019644, -0.8747651268310801, 2.9349999999999996]
+      size: [1.1050038990562907, 0.365, 0.05]
+      texture: textures/flat/light_gray.png
+    - name: right_glass
+      type: wall
+      wall_side: null
+      quat: [0.5006520003647463, -0.5006520003647463, 0.49934714831545596, -0.49934714831545596]
+      pos: [4.5121836180629735, -0.8749843417887386, 1.565]
+      size: [1.1050038990562907, 1.005, 0.006]
+      texture: textures/flat/white.png
+    - name: right_transom
+      type: wall
+      wall_side: null
+      quat: [0.5006520003647463, -0.5006520003647463, 0.49934714831545596, -0.49934714831545596]
+      pos: [4.526183570389086, -0.8749478059624622, 2.17]
+      size: [1.1050038990562907, 0.020000000000000018, 0.02]
+      texture: textures/flat/white.png
+    - name: right_mullion_0
+      type: wall
+      wall_side: null
+      quat: [0.5006520003647463, -0.5006520003647463, 0.49934714831545596, -0.49934714831545596]
+      pos: [4.526979532172008, -1.1799478059624622, 1.565]
+      size: [0.010000170264466889, 1.005, 0.02]
+      texture: textures/flat/white.png
+    - name: right_mullion_1
+      type: wall
+      wall_side: null
+      quat: [0.5006520003647463, -0.5006520003647463, 0.49934714831545596, -0.49934714831545596]
+      pos: [4.524813472238155, -0.3499478059624622, 1.565]
+      size: [0.010000170264466833, 1.005, 0.02]
+      texture: textures/flat/white.png
+    - name: divider_lower
+      type: wall
+      wall_side: null
+      quat: [0.5000578088836117, -0.5000578088836117, -0.4999421844318812, 0.4999421844318812]
+      pos: [-2.3570203410151547, -3.529994218777452, 0.35]
+      size: [1.7300000473263104, 0.35, 0.025]
+      texture: textures/flat/white.png
+    - name: divider_blue
+      type: wall
+      wall_side: null
+      quat: [0.5000578088836117, -0.5000578088836117, -0.4999421844318812, 0.4999421844318812]
+      pos: [-2.3570203410151547, -3.529994218777452, 1.005]
+      size: [1.7300000473263104, 0.30500000000000005, 0.025]
+      texture: textures/flat/white.png
+    - name: divider_cap
+      type: wall
+      wall_side: null
+      quat: [0.5000578088836117, -0.5000578088836117, -0.4999421844318812, 0.4999421844318812]
+      pos: [-2.3570203410151547, -3.529994218777452, 1.33]
+      size: [1.7300000473263104, 0.020000000000000018, 0.025]
+      texture: textures/flat/white.png
+  floor:
+    - name: floor
+      type: floor
+      pos: [0, -1.6, 0]
+      size: [5, 5, 0.025]
+      texture: textures/wood/wood_planks.png

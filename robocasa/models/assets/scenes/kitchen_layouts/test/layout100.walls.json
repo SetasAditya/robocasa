@@ -1,0 +1,1389 @@
+{
+  "schema_version": 1,
+  "scope": "kitchen and black-table area; front and left entry remain open",
+  "scan_file": "/robodata/aditya/RoboLab/output/xgrids2_lab/table_replacement/labapt_points.npz",
+  "scan_sha256": "bafbc1b610c9a091eb394fc73a51f05c300a5e751f6b4680951c55c11dd07714",
+  "scan_to_layout": {
+    "rotation_matrix": [
+      [
+        0.7648421872844885,
+        0.644217687237691,
+        0.0
+      ],
+      [
+        -0.644217687237691,
+        0.7648421872844885,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "translation": [
+      -0.2902413464291356,
+      -3.1817049958935595,
+      1.11
+    ]
+  },
+  "plane_fits": {
+    "back": {
+      "dependent_axis": 1,
+      "independent_axis": 0,
+      "slope": -0.004211760207678058,
+      "intercept": 0.2579795865928365,
+      "roi_m": [
+        [
+          -2.2,
+          1.5
+        ],
+        [
+          0.12,
+          0.43
+        ],
+        [
+          2.0,
+          3.15
+        ]
+      ],
+      "sample_points": 1746,
+      "inliers": 739,
+      "inlier_fraction": 0.42325315005727376,
+      "inlier_median_error_m": 0.01203710911902003,
+      "inlier_p95_error_m": 0.023413049700019558,
+      "all_roi_p95_error_m": 0.11004797070028481
+    },
+    "right": {
+      "dependent_axis": 0,
+      "independent_axis": 1,
+      "slope": -0.002609710763677872,
+      "intercept": 4.503900141576422,
+      "roi_m": [
+        [
+          4.25,
+          4.7
+        ],
+        [
+          -1.9,
+          0.1
+        ],
+        [
+          0.65,
+          2.6
+        ]
+      ],
+      "sample_points": 7339,
+      "inliers": 3987,
+      "inlier_fraction": 0.543262024799019,
+      "inlier_median_error_m": 0.010388459264537265,
+      "inlier_p95_error_m": 0.02314816880954449,
+      "all_roi_p95_error_m": 0.12515287218991075
+    },
+    "divider": {
+      "dependent_axis": 0,
+      "independent_axis": 1,
+      "slope": 0.0002312489080983739,
+      "intercept": -2.331204033038018,
+      "roi_m": [
+        [
+          -2.5,
+          -2.1
+        ],
+        [
+          -5.3,
+          -1.9
+        ],
+        [
+          0.78,
+          1.3
+        ]
+      ],
+      "sample_points": 4150,
+      "inliers": 3396,
+      "inlier_fraction": 0.8183132530120482,
+      "inlier_median_error_m": 0.006991003737238195,
+      "inlier_p95_error_m": 0.020499236591570102,
+      "all_roi_p95_error_m": 0.09726162076968671
+    }
+  },
+  "walls": [
+    {
+      "name": "back_red",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        -0.3249157655429574,
+        0.2793482312734514,
+        1.65
+      ],
+      "size": [
+        1.8850170736386784,
+        1.65,
+        0.02
+      ],
+      "texture": "textures/flat/labapt_red.png"
+    },
+    {
+      "name": "back_red_backing",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        -0.32462094494330845,
+        0.3493476104193697,
+        1.65
+      ],
+      "size": [
+        1.8850170736386784,
+        1.65,
+        0.05
+      ],
+      "texture": "textures/flat/light_gray.png"
+    },
+    {
+      "name": "back_pier_0",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        1.7500842344570426,
+        0.27060882884251936,
+        1.65
+      ],
+      "size": [
+        0.1100013304134034,
+        1.65,
+        0.02
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "back_pier_0_backing",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        1.7503790550566916,
+        0.3406082079884377,
+        1.65
+      ],
+      "size": [
+        0.1100013304134034,
+        1.65,
+        0.05
+      ],
+      "texture": "textures/flat/light_gray.png"
+    },
+    {
+      "name": "back_sill_0",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        2.0900842344570423,
+        0.26917683037190887,
+        0.29
+      ],
+      "size": [
+        0.15000168519031104,
+        0.29,
+        0.02
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "back_sill_0_backing",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        2.090379055056691,
+        0.3391762095178272,
+        0.29
+      ],
+      "size": [
+        0.15000168519031104,
+        0.29,
+        0.05
+      ],
+      "texture": "textures/flat/light_gray.png"
+    },
+    {
+      "name": "back_lintel_0",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        2.0900842344570423,
+        0.26917683037190887,
+        2.9349999999999996
+      ],
+      "size": [
+        0.15000168519031104,
+        0.365,
+        0.02
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "back_lintel_0_backing",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        2.090379055056691,
+        0.3391762095178272,
+        2.9349999999999996
+      ],
+      "size": [
+        0.15000168519031104,
+        0.365,
+        0.05
+      ],
+      "texture": "textures/flat/light_gray.png"
+    },
+    {
+      "name": "back_glass_0",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        2.0900252703371125,
+        0.2551769545427252,
+        1.575
+      ],
+      "size": [
+        0.15000168519031104,
+        0.9949999999999999,
+        0.006
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "back_transom_0",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        2.0900842344570423,
+        0.26917683037190887,
+        2.16
+      ],
+      "size": [
+        0.15000168519031104,
+        0.020000000000000018,
+        0.02
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "back_pier_1",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        3.230084234457042,
+        0.2643754237351559,
+        1.65
+      ],
+      "size": [
+        0.9100084259515555,
+        1.65,
+        0.02
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "back_pier_1_backing",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        3.230379055056691,
+        0.3343748028810742,
+        1.65
+      ],
+      "size": [
+        0.9100084259515555,
+        1.65,
+        0.05
+      ],
+      "texture": "textures/flat/light_gray.png"
+    },
+    {
+      "name": "back_sill_1",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        4.342034305245254,
+        0.2596921566740853,
+        0.29
+      ],
+      "size": [
+        0.12195150719184383,
+        0.29,
+        0.02
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "back_sill_1_backing",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        4.342329125844903,
+        0.3296915358200036,
+        0.29
+      ],
+      "size": [
+        0.12195150719184383,
+        0.29,
+        0.05
+      ],
+      "texture": "textures/flat/light_gray.png"
+    },
+    {
+      "name": "back_lintel_1",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        4.342034305245254,
+        0.2596921566740853,
+        2.9349999999999996
+      ],
+      "size": [
+        0.12195150719184383,
+        0.365,
+        0.02
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "back_lintel_1_backing",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        4.342329125844903,
+        0.3296915358200036,
+        2.9349999999999996
+      ],
+      "size": [
+        0.12195150719184383,
+        0.365,
+        0.05
+      ],
+      "texture": "textures/flat/light_gray.png"
+    },
+    {
+      "name": "back_glass_1",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        4.341975341125324,
+        0.24569228084490163,
+        1.575
+      ],
+      "size": [
+        0.12195150719184383,
+        0.9949999999999999,
+        0.006
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "back_transom_1",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.7071052132914831,
+        -0.7071052132914831,
+        0.0014890721963860248,
+        -0.0014890721963860248
+      ],
+      "pos": [
+        4.342034305245254,
+        0.2596921566740853,
+        2.16
+      ],
+      "size": [
+        0.12195150719184383,
+        0.020000000000000018,
+        0.02
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "right_solid",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.5006520003647463,
+        -0.5006520003647463,
+        0.49934714831545596,
+        -0.49934714831545596
+      ],
+      "pos": [
+        4.533295032220108,
+        -3.599947805962462,
+        1.65
+      ],
+      "size": [
+        1.5400053803571523,
+        1.65,
+        0.02
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "right_solid_backing",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.5006520003647463,
+        -0.5006520003647463,
+        0.49934714831545596,
+        -0.49934714831545596
+      ],
+      "pos": [
+        4.603294793850666,
+        -3.5997651268310795,
+        1.65
+      ],
+      "size": [
+        1.5400053803571523,
+        1.65,
+        0.05
+      ],
+      "texture": "textures/flat/light_gray.png"
+    },
+    {
+      "name": "right_sill",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.5006520003647463,
+        -0.5006520003647463,
+        0.49934714831545596,
+        -0.49934714831545596
+      ],
+      "pos": [
+        4.526183570389086,
+        -0.8749478059624622,
+        0.28
+      ],
+      "size": [
+        1.1050038990562907,
+        0.28,
+        0.02
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "right_sill_backing",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.5006520003647463,
+        -0.5006520003647463,
+        0.49934714831545596,
+        -0.49934714831545596
+      ],
+      "pos": [
+        4.596183332019644,
+        -0.8747651268310801,
+        0.28
+      ],
+      "size": [
+        1.1050038990562907,
+        0.28,
+        0.05
+      ],
+      "texture": "textures/flat/light_gray.png"
+    },
+    {
+      "name": "right_lintel",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.5006520003647463,
+        -0.5006520003647463,
+        0.49934714831545596,
+        -0.49934714831545596
+      ],
+      "pos": [
+        4.526183570389086,
+        -0.8749478059624622,
+        2.9349999999999996
+      ],
+      "size": [
+        1.1050038990562907,
+        0.365,
+        0.02
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "right_lintel_backing",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.5006520003647463,
+        -0.5006520003647463,
+        0.49934714831545596,
+        -0.49934714831545596
+      ],
+      "pos": [
+        4.596183332019644,
+        -0.8747651268310801,
+        2.9349999999999996
+      ],
+      "size": [
+        1.1050038990562907,
+        0.365,
+        0.05
+      ],
+      "texture": "textures/flat/light_gray.png"
+    },
+    {
+      "name": "right_glass",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.5006520003647463,
+        -0.5006520003647463,
+        0.49934714831545596,
+        -0.49934714831545596
+      ],
+      "pos": [
+        4.5121836180629735,
+        -0.8749843417887386,
+        1.565
+      ],
+      "size": [
+        1.1050038990562907,
+        1.005,
+        0.006
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "right_transom",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.5006520003647463,
+        -0.5006520003647463,
+        0.49934714831545596,
+        -0.49934714831545596
+      ],
+      "pos": [
+        4.526183570389086,
+        -0.8749478059624622,
+        2.17
+      ],
+      "size": [
+        1.1050038990562907,
+        0.020000000000000018,
+        0.02
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "right_mullion_0",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.5006520003647463,
+        -0.5006520003647463,
+        0.49934714831545596,
+        -0.49934714831545596
+      ],
+      "pos": [
+        4.526979532172008,
+        -1.1799478059624622,
+        1.565
+      ],
+      "size": [
+        0.010000170264466889,
+        1.005,
+        0.02
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "right_mullion_1",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.5006520003647463,
+        -0.5006520003647463,
+        0.49934714831545596,
+        -0.49934714831545596
+      ],
+      "pos": [
+        4.524813472238155,
+        -0.3499478059624622,
+        1.565
+      ],
+      "size": [
+        0.010000170264466833,
+        1.005,
+        0.02
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "divider_lower",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.5000578088836117,
+        -0.5000578088836117,
+        -0.4999421844318812,
+        0.4999421844318812
+      ],
+      "pos": [
+        -2.3570203410151547,
+        -3.529994218777452,
+        0.35
+      ],
+      "size": [
+        1.7300000473263104,
+        0.35,
+        0.025
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "divider_blue",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.5000578088836117,
+        -0.5000578088836117,
+        -0.4999421844318812,
+        0.4999421844318812
+      ],
+      "pos": [
+        -2.3570203410151547,
+        -3.529994218777452,
+        1.005
+      ],
+      "size": [
+        1.7300000473263104,
+        0.30500000000000005,
+        0.025
+      ],
+      "texture": "textures/flat/white.png"
+    },
+    {
+      "name": "divider_cap",
+      "type": "wall",
+      "wall_side": null,
+      "quat": [
+        0.5000578088836117,
+        -0.5000578088836117,
+        -0.4999421844318812,
+        0.4999421844318812
+      ],
+      "pos": [
+        -2.3570203410151547,
+        -3.529994218777452,
+        1.33
+      ],
+      "size": [
+        1.7300000473263104,
+        0.020000000000000018,
+        0.025
+      ],
+      "texture": "textures/flat/white.png"
+    }
+  ],
+  "segments": [
+    {
+      "name": "back_red",
+      "plane": "back",
+      "horizontal_range_m": [
+        -2.25,
+        1.6
+      ],
+      "z_range_m": [
+        0,
+        3.3
+      ],
+      "surface_midpoint_xy_m": [
+        -0.32499999999999996,
+        0.2593484086603319
+      ],
+      "outward_normal_xy": [
+        0.0042117228521278294,
+        0.9999911306559759
+      ],
+      "thickness_m": 0.04,
+      "backing_m": 0.1
+    },
+    {
+      "name": "back_pier_0",
+      "plane": "back",
+      "horizontal_range_m": [
+        1.6,
+        1.9
+      ],
+      "z_range_m": [
+        0,
+        3.3
+      ],
+      "surface_midpoint_xy_m": [
+        1.75,
+        0.25060900622939986
+      ],
+      "outward_normal_xy": [
+        0.0042117228521278294,
+        0.9999911306559759
+      ],
+      "thickness_m": 0.04,
+      "backing_m": 0.1
+    },
+    {
+      "name": "back_sill_0",
+      "plane": "back",
+      "horizontal_range_m": [
+        1.9,
+        2.28
+      ],
+      "z_range_m": [
+        0,
+        0.58
+      ],
+      "surface_midpoint_xy_m": [
+        2.09,
+        0.24917700775878934
+      ],
+      "outward_normal_xy": [
+        0.0042117228521278294,
+        0.9999911306559759
+      ],
+      "thickness_m": 0.04,
+      "backing_m": 0.1
+    },
+    {
+      "name": "back_lintel_0",
+      "plane": "back",
+      "horizontal_range_m": [
+        1.9,
+        2.28
+      ],
+      "z_range_m": [
+        2.57,
+        3.3
+      ],
+      "surface_midpoint_xy_m": [
+        2.09,
+        0.24917700775878934
+      ],
+      "outward_normal_xy": [
+        0.0042117228521278294,
+        0.9999911306559759
+      ],
+      "thickness_m": 0.04,
+      "backing_m": 0.1
+    },
+    {
+      "name": "back_glass_0",
+      "plane": "back",
+      "horizontal_range_m": [
+        1.9,
+        2.28
+      ],
+      "z_range_m": [
+        0.58,
+        2.57
+      ],
+      "surface_midpoint_xy_m": [
+        2.09,
+        0.24917700775878934
+      ],
+      "outward_normal_xy": [
+        0.0042117228521278294,
+        0.9999911306559759
+      ],
+      "thickness_m": 0.012,
+      "backing_m": 0
+    },
+    {
+      "name": "back_transom_0",
+      "plane": "back",
+      "horizontal_range_m": [
+        1.9,
+        2.28
+      ],
+      "z_range_m": [
+        2.14,
+        2.18
+      ],
+      "surface_midpoint_xy_m": [
+        2.09,
+        0.24917700775878934
+      ],
+      "outward_normal_xy": [
+        0.0042117228521278294,
+        0.9999911306559759
+      ],
+      "thickness_m": 0.04,
+      "backing_m": 0
+    },
+    {
+      "name": "back_pier_1",
+      "plane": "back",
+      "horizontal_range_m": [
+        2.28,
+        4.18
+      ],
+      "z_range_m": [
+        0,
+        3.3
+      ],
+      "surface_midpoint_xy_m": [
+        3.2299999999999995,
+        0.24437560112203635
+      ],
+      "outward_normal_xy": [
+        0.0042117228521278294,
+        0.9999911306559759
+      ],
+      "thickness_m": 0.04,
+      "backing_m": 0.1
+    },
+    {
+      "name": "back_sill_1",
+      "plane": "back",
+      "horizontal_range_m": [
+        4.18,
+        4.503900141576422
+      ],
+      "z_range_m": [
+        0,
+        0.58
+      ],
+      "surface_midpoint_xy_m": [
+        4.3419500707882115,
+        0.23969233406096577
+      ],
+      "outward_normal_xy": [
+        0.0042117228521278294,
+        0.9999911306559759
+      ],
+      "thickness_m": 0.04,
+      "backing_m": 0.1
+    },
+    {
+      "name": "back_lintel_1",
+      "plane": "back",
+      "horizontal_range_m": [
+        4.18,
+        4.503900141576422
+      ],
+      "z_range_m": [
+        2.57,
+        3.3
+      ],
+      "surface_midpoint_xy_m": [
+        4.3419500707882115,
+        0.23969233406096577
+      ],
+      "outward_normal_xy": [
+        0.0042117228521278294,
+        0.9999911306559759
+      ],
+      "thickness_m": 0.04,
+      "backing_m": 0.1
+    },
+    {
+      "name": "back_glass_1",
+      "plane": "back",
+      "horizontal_range_m": [
+        4.18,
+        4.503900141576422
+      ],
+      "z_range_m": [
+        0.58,
+        2.57
+      ],
+      "surface_midpoint_xy_m": [
+        4.3419500707882115,
+        0.23969233406096577
+      ],
+      "outward_normal_xy": [
+        0.0042117228521278294,
+        0.9999911306559759
+      ],
+      "thickness_m": 0.012,
+      "backing_m": 0
+    },
+    {
+      "name": "back_transom_1",
+      "plane": "back",
+      "horizontal_range_m": [
+        4.18,
+        4.503900141576422
+      ],
+      "z_range_m": [
+        2.14,
+        2.18
+      ],
+      "surface_midpoint_xy_m": [
+        4.3419500707882115,
+        0.23969233406096577
+      ],
+      "outward_normal_xy": [
+        0.0042117228521278294,
+        0.9999911306559759
+      ],
+      "thickness_m": 0.04,
+      "backing_m": 0
+    },
+    {
+      "name": "right_solid",
+      "plane": "right",
+      "horizontal_range_m": [
+        -5.18,
+        -2.02
+      ],
+      "z_range_m": [
+        0,
+        3.3
+      ],
+      "surface_midpoint_xy_m": [
+        4.513295100325663,
+        -3.5999999999999996
+      ],
+      "outward_normal_xy": [
+        0.999996594722259,
+        0.002609701876887898
+      ],
+      "thickness_m": 0.04,
+      "backing_m": 0.1
+    },
+    {
+      "name": "right_sill",
+      "plane": "right",
+      "horizontal_range_m": [
+        -2.02,
+        0.27
+      ],
+      "z_range_m": [
+        0,
+        0.56
+      ],
+      "surface_midpoint_xy_m": [
+        4.50618363849464,
+        -0.875
+      ],
+      "outward_normal_xy": [
+        0.999996594722259,
+        0.002609701876887898
+      ],
+      "thickness_m": 0.04,
+      "backing_m": 0.1
+    },
+    {
+      "name": "right_lintel",
+      "plane": "right",
+      "horizontal_range_m": [
+        -2.02,
+        0.27
+      ],
+      "z_range_m": [
+        2.57,
+        3.3
+      ],
+      "surface_midpoint_xy_m": [
+        4.50618363849464,
+        -0.875
+      ],
+      "outward_normal_xy": [
+        0.999996594722259,
+        0.002609701876887898
+      ],
+      "thickness_m": 0.04,
+      "backing_m": 0.1
+    },
+    {
+      "name": "right_glass",
+      "plane": "right",
+      "horizontal_range_m": [
+        -2.02,
+        0.27
+      ],
+      "z_range_m": [
+        0.56,
+        2.57
+      ],
+      "surface_midpoint_xy_m": [
+        4.50618363849464,
+        -0.875
+      ],
+      "outward_normal_xy": [
+        0.999996594722259,
+        0.002609701876887898
+      ],
+      "thickness_m": 0.012,
+      "backing_m": 0
+    },
+    {
+      "name": "right_transom",
+      "plane": "right",
+      "horizontal_range_m": [
+        -2.02,
+        0.27
+      ],
+      "z_range_m": [
+        2.15,
+        2.19
+      ],
+      "surface_midpoint_xy_m": [
+        4.50618363849464,
+        -0.875
+      ],
+      "outward_normal_xy": [
+        0.999996594722259,
+        0.002609701876887898
+      ],
+      "thickness_m": 0.04,
+      "backing_m": 0
+    },
+    {
+      "name": "right_mullion_0",
+      "plane": "right",
+      "horizontal_range_m": [
+        -1.23,
+        -1.13
+      ],
+      "z_range_m": [
+        0.56,
+        2.57
+      ],
+      "surface_midpoint_xy_m": [
+        4.506979600277562,
+        -1.18
+      ],
+      "outward_normal_xy": [
+        0.999996594722259,
+        0.002609701876887898
+      ],
+      "thickness_m": 0.04,
+      "backing_m": 0
+    },
+    {
+      "name": "right_mullion_1",
+      "plane": "right",
+      "horizontal_range_m": [
+        -0.39999999999999997,
+        -0.3
+      ],
+      "z_range_m": [
+        0.56,
+        2.57
+      ],
+      "surface_midpoint_xy_m": [
+        4.50481354034371,
+        -0.35
+      ],
+      "outward_normal_xy": [
+        0.999996594722259,
+        0.002609701876887898
+      ],
+      "thickness_m": 0.04,
+      "backing_m": 0
+    },
+    {
+      "name": "divider_lower",
+      "plane": "divider",
+      "horizontal_range_m": [
+        -5.3,
+        -1.76
+      ],
+      "z_range_m": [
+        0,
+        0.7
+      ],
+      "surface_midpoint_xy_m": [
+        -2.3320203416836054,
+        -3.53
+      ],
+      "outward_normal_xy": [
+        -0.9999999732619722,
+        0.00023124890191523418
+      ],
+      "thickness_m": 0.05,
+      "backing_m": 0
+    },
+    {
+      "name": "divider_blue",
+      "plane": "divider",
+      "horizontal_range_m": [
+        -5.3,
+        -1.76
+      ],
+      "z_range_m": [
+        0.7,
+        1.31
+      ],
+      "surface_midpoint_xy_m": [
+        -2.3320203416836054,
+        -3.53
+      ],
+      "outward_normal_xy": [
+        -0.9999999732619722,
+        0.00023124890191523418
+      ],
+      "thickness_m": 0.05,
+      "backing_m": 0
+    },
+    {
+      "name": "divider_cap",
+      "plane": "divider",
+      "horizontal_range_m": [
+        -5.3,
+        -1.76
+      ],
+      "z_range_m": [
+        1.31,
+        1.35
+      ],
+      "surface_midpoint_xy_m": [
+        -2.3320203416836054,
+        -3.53
+      ],
+      "outward_normal_xy": [
+        -0.9999999732619722,
+        0.00023124890191523418
+      ],
+      "thickness_m": 0.05,
+      "backing_m": 0
+    }
+  ],
+  "appearance_rgba": {
+    "back_glass_0": [
+      0.55,
+      0.72,
+      0.8,
+      0.18
+    ],
+    "back_transom_0": [
+      0.12,
+      0.14,
+      0.15,
+      1
+    ],
+    "back_glass_1": [
+      0.55,
+      0.72,
+      0.8,
+      0.18
+    ],
+    "back_transom_1": [
+      0.12,
+      0.14,
+      0.15,
+      1
+    ],
+    "right_glass": [
+      0.55,
+      0.72,
+      0.8,
+      0.18
+    ],
+    "right_transom": [
+      0.12,
+      0.14,
+      0.15,
+      1
+    ],
+    "right_mullion_0": [
+      0.12,
+      0.14,
+      0.15,
+      1
+    ],
+    "right_mullion_1": [
+      0.12,
+      0.14,
+      0.15,
+      1
+    ],
+    "divider_lower": [
+      0.62,
+      0.61,
+      0.58,
+      1
+    ],
+    "divider_blue": [
+      0.055,
+      0.12,
+      0.25,
+      1
+    ],
+    "divider_cap": [
+      0.75,
+      0.75,
+      0.72,
+      1
+    ]
+  },
+  "openings": [
+    {
+      "name": "left_entry",
+      "plane": "divider",
+      "horizontal_range_m": [
+        -1.76,
+        0.27
+      ],
+      "z_range_m": [
+        0,
+        3.3
+      ],
+      "kind": "open connection"
+    },
+    {
+      "name": "front_connection",
+      "y": -5.3,
+      "x_range_m": [
+        -2.35,
+        4.5
+      ],
+      "kind": "open scope boundary into the rest of the lab"
+    },
+    {
+      "name": "back_windows",
+      "plane": "back",
+      "horizontal_ranges_m": [
+        [
+          1.9,
+          2.28
+        ],
+        [
+          4.18,
+          4.503900141576422
+        ]
+      ],
+      "z_range_m": [
+        0.58,
+        2.57
+      ],
+      "kind": "fixed glazing; not a traversable doorway"
+    },
+    {
+      "name": "right_windows",
+      "plane": "right",
+      "horizontal_range_m": [
+        -2.02,
+        0.27
+      ],
+      "z_range_m": [
+        0.56,
+        2.57
+      ],
+      "kind": "fixed glazing; not a traversable doorway"
+    }
+  ],
+  "uncertainties": [
+    "Surface fits use Gaussian centers, with outliers and missing texture; residuals are not survey accuracy.",
+    "Window edges, divider endpoints and 3.30 m upper termination are orthographic scan estimates.",
+    "Wall/backing thickness and glazing material are inferred; backing extends outside the room.",
+    "No full apartment, ceiling, door articulation, furnishings or overhead beams are reconstructed.",
+    "White-wall continuity between windows is inferred from the scan; no unverified door opening is inserted."
+  ]
+}

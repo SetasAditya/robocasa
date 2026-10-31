@@ -20,5 +20,30 @@
     "approach_passed": 37,
     "approach_needs_review": 3
   },
-  "accepted_demonstrations_included": 0
+  "accepted_demonstrations_included": 0,
+  "labapt": {
+    "date": "2026-10-30",
+    "layout": 100,
+    "scenario_suite_tests_passed": 15,
+    "geometry_registration_tests_passed": 11,
+    "passive_stability_seconds": 25,
+    "visual_geometries_unchanged": 241,
+    "isolated_mechanical_load_checks": "passed",
+    "checkout_physical_workflows": {
+      "OpenDrawer": true,
+      "OpenFridge": true,
+      "OpenMicrowave": true,
+      "OpenCabinet": true,
+      "fetch_surface": true
+    },
+    "checkout_workflow_seeds": [
+      0
+    ],
+    "checkout_workflow_qualification": "Native success, action-only replay and every-recorded-state contact audit; no paired-camera or real-world transfer qualification.",
+    "prior_runtime_three_seed_workflow_validation": {
+      "passed": 15,
+      "attempts": 15
+    },
+    "generated_scenes_recordings_or_external_asset_links_committed": false
+  }
 }

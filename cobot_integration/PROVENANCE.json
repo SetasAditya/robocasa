@@ -36,5 +36,32 @@
     "robosuite": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c",
     "robocasa-mimicgen": "b89c3b5e02927ceb8599401cc01551a8da21fbf8",
     "robocasa-robomimic": "271a76c2d55c8b0f94d3d589f26fcae0d47f64a1"
+  },
+  "labapt": {
+    "source": "Validated LabApt v5 integration from RoboVision",
+    "layout": 100,
+    "integration_notes": [
+      "Preserve the branch scenario suite, curriculum and portable CoBot robot.",
+      "Register the measured held-out layout and source-derived appliance assets.",
+      "Keep optional LabApt controllers self-contained; include only their used motion/planning methods.",
+      "Port installed-object availability filtering used by the validated runtime."
+    ],
+    "source_sha256": {
+      "cobot_integration/labapt/__init__.py": "7f5df08c94665b975034de2310c52a8688f85e66c78f961d0cb2fb103d8bdc8c",
+      "cobot_integration/labapt/__main__.py": "8548f45e9319a39e83a48c5fd625fff2e269b7ebaa2bc40bc45c1ada2067ab23",
+      "cobot_integration/labapt/_contacts.py": "c583ae4c95d0243ca26387de4d9546c77eb70324f7c2aee6ce038919e98d1b4d",
+      "cobot_integration/labapt/_dynamics.py": "a11468a78833f5e5794537d3785e1e2e4fd09f69eebbbd08418ad7f5af23bda3",
+      "cobot_integration/labapt/_fetch_probe.py": "4b9209ce01295969eb333c49fa128bd2754971d777b6356501969a6d542fb8eb",
+      "cobot_integration/labapt/_fixture_probe.py": "180853d27a1e5f9a25d8d328be1d3c020a1d4df8f6b850ea32559bd1c9e75cc6",
+      "cobot_integration/labapt/_inventory.py": "3aaffc85eb43b05aa83c61f1e866a15af2e439c39e4a2f1a1911774685816f99",
+      "cobot_integration/labapt/_motion.py": "7fa505708e0c76798da95cd42b50e111ce6b07004f9980f1715d7eea77722476",
+      "cobot_integration/labapt/_resets.py": "443efef85b3514555b529ca29c2b39e7f1094189faefcdc01d455febf8975357",
+      "cobot_integration/labapt/_rollouts.py": "b7f4d47097b61b55628be6918816ac3f6226b0fe6b1485e048c68dee7195fec6",
+      "cobot_integration/labapt/_rrt.py": "d7688dbea455706e0e4fec025ddaa741cea18974e299d5c1a4d67a14f137c496",
+      "cobot_integration/labapt/_scene.py": "a4c3ea8f570b5ccba53fade1356c32ec44d21ed1483673e16e84bd68c7dcb5af",
+      "cobot_integration/labapt/_tests.py": "756f66e61173e968dfe2c247a13e70e7122b91df62690ff903cb4628b7b8eb61",
+      "cobot_integration/labapt/cabinet.py": "24be242635005ea14430c659f87793371e13bb445eaf5496205fb367a4097116",
+      "cobot_integration/labapt/experts.py": "39799c3503b5bfe15d9867a13e63f43d9f12878a6181dc3905b76838d714daf0"
+    }
   }
 }

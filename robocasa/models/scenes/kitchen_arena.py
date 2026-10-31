@@ -9,6 +9,7 @@ from robocasa.models.scenes.scene_builder import (
     get_style_path,
 )
 from copy import deepcopy
+from robocasa.models.scenes.scene_registry import LayoutType
 
 
 def enable_fixtures_in_config(config, names):
@@ -135,11 +136,21 @@ class KitchenArena(Arena):
             with open(style_path, "r") as f:
                 style_config = yaml.safe_load(f)
 
+        is_labapt = not isinstance(layout_id, dict) and layout_id in (
+            LayoutType.LAB_APT, "lab_apt", "LAB_APT", "layout100", "LAYOUT100"
+        )
+        # The measured lab appearance is fixed across training style IDs.
+        if is_labapt:
+            style_config = {}
+
         self.fixtures = create_fixtures(
             layout_config=layout_config,
             style_config=style_config,
             rng=rng,
         )
+        if is_labapt:
+            from robocasa.models.scenes.labapt import configure_fixtures
+            configure_fixtures(self.fixtures)
 
     def get_fixture_cfgs(self):
         """
