@@ -102,3 +102,10 @@ Its experimental profiles are separate from native tasks and historical scores.
 
 See the [illustrated ten-profile catalog](challenge/README.md#ten-profiles-in-two-families)
 for scene images and the exact object/distractor randomizations.
+
+## Native teleoperation and LeRobot datasets
+
+The [CoBot data pipeline](data/README.md) records native keyboard/SpaceMouse or
+expert demonstrations, validates independent replay, exports LeRobot datasets
+and supplies a π0.5 training/evaluation bridge. Transfer and LabApt challenge
+learning use separate plans and datasets.

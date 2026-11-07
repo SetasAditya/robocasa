@@ -1,0 +1,50 @@
+{
+  "status": "recording_replay_export_verified_training_pending",
+  "simulator_source_sha256": "3463f81bbcc8f6a275281ec062d420508b475b662e8056c20d7f427f10f02d46",
+  "automated_tests": {
+    "data": 13,
+    "challenge": 18,
+    "scenarios": 15
+  },
+  "evidence_root": "robovision:/robodata/aditya/robocasa_kitchen_aug_v1/data_pipeline_evidence/final",
+  "capture": {
+    "task": "OpenDrawer",
+    "track": "transfer",
+    "split": "test",
+    "layout": 100,
+    "frames": 1498,
+    "success": true,
+    "contact_violation_steps": 0,
+    "training_eligible": false,
+    "evaluation_eligible": true
+  },
+  "independent_replay": {
+    "passed": true,
+    "max_physical_state_error": 0.0,
+    "max_state18_error": 0.0,
+    "sampled_rgb_mae": 1.6879716435185186
+  },
+  "lerobot": {
+    "writer_version": "0.4.4",
+    "official_reader_passed": true,
+    "frames": 1498,
+    "episodes": 1,
+    "sampled_rgb_mae": 3.107783555984497,
+    "collection_sha256": "a0e5266974520e2b78c30cc36e59975a5407e7cfd9c10a31c9a0bacf76a8c0f8",
+    "temporal_chunk_diagnostic": {
+      "passed": true,
+      "purpose": "evaluation-only diagnostic",
+      "action_shape": [
+        50,
+        11
+      ],
+      "terminal_padding": 49
+    }
+  },
+  "limitations": [
+    "GUI and physical input devices not operated on headless validation host; native imports and loop hooks tested.",
+    "No certified training demonstrations yet. Example expert attempts in train layouts 11,16,24 failed and remain ineligible.",
+    "Pinned LeRobot training checkout, pi05 weights and tokenizer not supplied; pretrained backward pass and learned-policy evaluation not run.",
+    "Challenge geometry reviews and successful replay witnesses remain prerequisites for challenge exports."
+  ]
+}

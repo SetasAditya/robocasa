@@ -78,7 +78,18 @@ if __name__ == "__main__":
         choices=["keyboard", "spacemouse"],
         help="Teleop device (default: keyboard)",
     )
+    parser.add_argument('--data-scene', help='Prepared CoBot data-pipeline scene bundle')
+    parser.add_argument('--data-output', help='New synchronized episode directory')
+    parser.add_argument('--max-steps', type=int, default=1800)
     args = parser.parse_args()
+    if args.data_scene or args.data_output:
+        if not (args.data_scene and args.data_output):
+            parser.error('--data-scene and --data-output must be supplied together')
+        if args.max_steps < 1:
+            parser.error('--max-steps must be positive')
+        from cobot_integration.data.recording import teleop
+        teleop(args.data_scene, args.data_output, args.device, args.max_steps)
+        raise SystemExit(0)
 
     tasks = OrderedDict(
         [

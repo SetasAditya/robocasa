@@ -23,6 +23,12 @@ pending after NFS startup stalls; see the
 automatic trajectory expansion and VLA training require further qualification.
 
 
+## Demonstrations and π0.5 datasets
+
+Use the [native teleoperation and LeRobot pipeline](cobot_integration/data/README.md)
+for keyboard/SpaceMouse recording, expert plugins, action replay, dataset export
+and π0.5 smoke checks. Keep unseen-LabApt transfer separate from challenge learning.
+
 ## LabApt manipulation challenge
 
 The experimental challenge adds **10 task profiles in 2 families**, separate from

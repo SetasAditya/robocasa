@@ -14,7 +14,6 @@ import os
 import time
 from glob import glob
 import sys
-import hid
 
 import h5py
 import imageio
@@ -58,6 +57,12 @@ def collect_human_trajectory(
     render=True,
     max_fr=None,
     print_info=True,
+    reset_fn=None,
+    step_fn=None,
+    warmup_steps=1,
+    close_env=True,
+    max_steps=None,
+    success_fn=None,
 ):
     """
     Use the device (keyboard or SpaceNav 3D mouse) to collect a demonstration.
@@ -69,9 +74,13 @@ def collect_human_trajectory(
         device (Device): to receive controls from the device
         arms (str): which arm to control (eg bimanual) 'right' or 'left'
         env_configuration (str): specified environment configuration
+        reset_fn, step_fn: optional prepared-scene restore and synchronized recorder hooks.
+        warmup_steps: unrecorded setup steps; use zero for frozen checkpoints.
+        close_env: leave ownership to a recorder when False.
+        max_steps: optional bounded executed-action budget.
     """
 
-    env.reset()
+    (reset_fn or env.reset)()
 
     ep_meta = env.get_ep_meta()
     # print(json.dumps(ep_meta, indent=4))
@@ -105,7 +114,7 @@ def collect_human_trajectory(
     ]
 
     zero_action = np.zeros(env.action_dim)
-    for _ in range(1):
+    for _ in range(warmup_steps):
         # do a dummy step thru base env to initalize things, but don't record the step
         if isinstance(env, DataCollectionWrapper):
             env.env.step(zero_action)
@@ -113,6 +122,8 @@ def collect_human_trajectory(
             env.step(zero_action)
 
     discard_traj = False
+    executed_steps = 0
+    check_success = success_fn or env._check_success
 
     wall_hotkeys = EnclosingWallHotkeyHandler(env)
 
@@ -165,7 +176,8 @@ def collect_human_trajectory(
         env_action = np.concatenate(env_action)
 
         # Run environment step
-        obs, _, _, _ = env.step(env_action)
+        obs, _, _, _ = (step_fn or env.step)(env_action.copy())
+        executed_steps += 1
         if render:
             env.render()
 
@@ -174,13 +186,17 @@ def collect_human_trajectory(
             break
 
         # state machine to check for having a success for 15 consecutive timesteps
-        if env._check_success():
+        if check_success():
             if task_completion_hold_count > 0:
                 task_completion_hold_count -= 1  # latched state, decrement count
             else:
                 task_completion_hold_count = 15  # reset count on first success timestep
         else:
             task_completion_hold_count = -1  # null the counter if there's no success
+
+        if max_steps is not None and executed_steps >= max_steps:
+            discard_traj = not bool(check_success())
+            break
 
         # limit frame rate if necessary
         if max_fr is not None:
@@ -199,7 +215,8 @@ def collect_human_trajectory(
         ep_directory = None
 
     # cleanup for end of data collection episodes
-    env.close()
+    if close_env:
+        env.close()
 
     return ep_directory, discard_traj
 
