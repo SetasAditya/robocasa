@@ -93,3 +93,9 @@ and licensing; camera calibration is provisional simulation calibration.
 ## LabApt held-out kitchen
 
 The measured lab kitchen is registered as layout 100 (`LayoutType.LAYOUT100` / `LAB_APT`). See [labapt/README.md](labapt/README.md) for usage and optional validation commands. The existing scenario suite and curriculum are preserved; LabApt is excluded from default training and layout groups.
+
+## Experimental manipulation challenge
+
+The versioned [LabApt challenge suite](challenge/README.md) adds ten custom task
+profiles with frozen-scene qualification and a common controller interface.
+Its experimental profiles are separate from native tasks and historical scores.

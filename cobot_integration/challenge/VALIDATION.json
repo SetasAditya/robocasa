@@ -1,0 +1,240 @@
+{
+  "version": "labapt-challenge-v1",
+  "tested_on": "2026-11-07",
+  "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+  "checks": {
+    "challenge_unit_tests": 18,
+    "existing_scenario_tests": 15,
+    "robolab_cpu_tests": 11,
+    "launcher_split_plans": 120,
+    "launcher_unique_seeds": 4200
+  },
+  "scope": "Easy workflow initialization: one development seed per ordinary-reset profile. Other difficulties and manipulation checkpoints are not runtime-qualified.",
+  "scored_scenes": 0,
+  "policy_evaluations": 0,
+  "physical_validation": false,
+  "remaining": [
+    "Asset-specific geometry and difficulty review",
+    "Successful witness trajectories for each scored scene",
+    "Physically recorded approach checkpoints for manipulation mode",
+    "Physically recorded offset grasps for recovery",
+    "Practice/formal scene preparation after development calibration",
+    "Physical robot validation"
+  ],
+  "tasks": [
+    {
+      "task": "OccludedMugRetrieval",
+      "status": "validated_reset",
+      "result": {
+        "scene_sha256": "41c8cdd7beb0d4eea9ab6dfbbc62ff3b1a80706d723c85a4d892f81cf7fe34a1",
+        "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+        "checks": {
+          "initially_incomplete": true,
+          "initial_contacts": true,
+          "initial_fixture_contacts": true,
+          "replay": true,
+          "mobilebase0_kinect": true,
+          "robot0_eye_in_hand": true,
+          "passive_stability": true,
+          "physical_fit_review": false,
+          "witness": false
+        },
+        "qualified": false,
+        "status": "experimental"
+      },
+      "tail": "",
+      "reset_image_sha256": "41e31c36b4a578a72ef3ca1d08252621039bd6d393489dbbc94d8c0d9997411e"
+    },
+    {
+      "task": "CrowdedRackMugPlacement",
+      "status": "validated_reset",
+      "result": {
+        "scene_sha256": "43c50ffd33691ffd4c74177fc9c36d3dadb26cb3e611f891aabb27f07c9a02a7",
+        "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+        "checks": {
+          "initially_incomplete": true,
+          "initial_contacts": true,
+          "initial_fixture_contacts": true,
+          "replay": true,
+          "mobilebase0_kinect": true,
+          "robot0_eye_in_hand": true,
+          "passive_stability": true,
+          "physical_fit_review": false,
+          "witness": false
+        },
+        "qualified": false,
+        "status": "experimental"
+      },
+      "tail": "",
+      "reset_image_sha256": "de9c43537978a55fdfd6ca2c89e2da4c761c48fd54a339d1a1cda46cf86317b5"
+    },
+    {
+      "task": "ShallowDrawerRetrieval",
+      "status": "validated_reset",
+      "result": {
+        "scene_sha256": "b2dfb43898d1ddfa32e02885d6a99ae754b095f6ac5f00814e7c4977da65da6a",
+        "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+        "checks": {
+          "initially_incomplete": true,
+          "initial_contacts": true,
+          "initial_fixture_contacts": true,
+          "replay": true,
+          "mobilebase0_kinect": true,
+          "robot0_eye_in_hand": true,
+          "passive_stability": true,
+          "physical_fit_review": false,
+          "witness": false
+        },
+        "qualified": false,
+        "status": "experimental",
+        "sensor_contract_passed": true,
+        "independent_action_replay_passed": true
+      },
+      "tail": "",
+      "reset_image_sha256": "4861466a79d41fca3b8da9f54af77626783b6d84bec408cc298e21a1c766d156"
+    },
+    {
+      "task": "CabinetBowlStacking",
+      "status": "validated_reset",
+      "result": {
+        "scene_sha256": "afa0dbbdce39e95ec13caf0e291d1d751bbd6300e42890158f079c4b6f436cb8",
+        "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+        "checks": {
+          "initially_incomplete": true,
+          "initial_contacts": true,
+          "initial_fixture_contacts": true,
+          "replay": true,
+          "mobilebase0_kinect": true,
+          "robot0_eye_in_hand": true,
+          "passive_stability": true,
+          "physical_fit_review": false,
+          "witness": false
+        },
+        "qualified": false,
+        "status": "experimental"
+      },
+      "tail": "",
+      "reset_image_sha256": "8d93b96aa2b8f2cc70993bfeb15e0b11132dbe731f7c33beec0593c4e9632d7b"
+    },
+    {
+      "task": "RestrictedDoorRetrieval",
+      "status": "validated_reset",
+      "result": {
+        "scene_sha256": "2eb053a72796a771c9688d8a9635d9f2a245331ed2db608e8a78bca5ae2852b3",
+        "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+        "checks": {
+          "initially_incomplete": true,
+          "initial_contacts": true,
+          "initial_fixture_contacts": true,
+          "replay": true,
+          "mobilebase0_kinect": true,
+          "robot0_eye_in_hand": true,
+          "passive_stability": true,
+          "physical_fit_review": false,
+          "witness": false
+        },
+        "qualified": false,
+        "status": "experimental"
+      },
+      "tail": "",
+      "reset_image_sha256": "0457036478274607606c8fb6316ba28029103ff0d75d390b98a7cc1df695957c"
+    },
+    {
+      "task": "ImperfectGraspRecovery",
+      "status": "requires_physical_grasp_initialization",
+      "qualified": false
+    },
+    {
+      "task": "PlateRackInsertion",
+      "status": "validated_reset",
+      "result": {
+        "scene_sha256": "4f49a570f95caec3b59ded1ea76d52de4a2b4409a1f6b657b14f2c525f30be60",
+        "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+        "checks": {
+          "initially_incomplete": true,
+          "initial_contacts": true,
+          "initial_fixture_contacts": true,
+          "replay": true,
+          "mobilebase0_kinect": true,
+          "robot0_eye_in_hand": true,
+          "passive_stability": true,
+          "physical_fit_review": false,
+          "witness": false
+        },
+        "qualified": false,
+        "status": "experimental"
+      },
+      "tail": "",
+      "reset_image_sha256": "35acaea7f50e96e799aea81927d9b27d414e486b1ea06ab2c357fd85e7932740"
+    },
+    {
+      "task": "CabinetBowlNesting",
+      "status": "validated_reset",
+      "result": {
+        "scene_sha256": "3b9cbc9dd1de96fe4d67211d0c194531ed2c446a419794ceab9bd9bf4b50f3d3",
+        "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+        "checks": {
+          "initially_incomplete": true,
+          "initial_contacts": true,
+          "initial_fixture_contacts": true,
+          "replay": true,
+          "mobilebase0_kinect": true,
+          "robot0_eye_in_hand": true,
+          "passive_stability": true,
+          "physical_fit_review": false,
+          "witness": false
+        },
+        "qualified": false,
+        "status": "experimental"
+      },
+      "tail": "",
+      "reset_image_sha256": "bb66274ec21ffe74413573b660ebc6b1d5778da2f4dc98c4f7d3e6f4d7579a98"
+    },
+    {
+      "task": "GuidedTrayInsertion",
+      "status": "validated_reset",
+      "result": {
+        "scene_sha256": "890acea9205d8766ea6d1f70f8f7bedcb9b40785dd6f50ea80c57481d73251c4",
+        "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+        "checks": {
+          "initially_incomplete": true,
+          "initial_contacts": true,
+          "initial_fixture_contacts": true,
+          "replay": true,
+          "mobilebase0_kinect": true,
+          "robot0_eye_in_hand": true,
+          "passive_stability": true,
+          "physical_fit_review": false,
+          "witness": false
+        },
+        "qualified": false,
+        "status": "experimental"
+      },
+      "tail": "",
+      "reset_image_sha256": "34e3d68f4c83032a9333991b5aa5e94deb917b3ebfa417c1bf0f5ea97a17268e"
+    },
+    {
+      "task": "SpongeContactCoverage",
+      "status": "validated_reset",
+      "result": {
+        "scene_sha256": "424fac0b3dab2a07080385c52954ed49d2f197fecbc35149d1b78950f31d4947",
+        "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+        "checks": {
+          "initially_incomplete": true,
+          "initial_contacts": true,
+          "initial_fixture_contacts": true,
+          "replay": true,
+          "mobilebase0_kinect": true,
+          "robot0_eye_in_hand": true,
+          "passive_stability": true,
+          "physical_fit_review": false,
+          "witness": false
+        },
+        "qualified": false,
+        "status": "experimental"
+      },
+      "tail": "",
+      "reset_image_sha256": "48d69d426d7f3afe358c5cc31fc9372e17cd6fe52dbb26b733f6c37d6c6de971"
+    }
+  ]
+}
