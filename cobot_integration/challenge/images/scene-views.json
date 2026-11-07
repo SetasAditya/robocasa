@@ -1,0 +1,176 @@
+{
+  "description": "Documentation views of frozen development starting scenes; no policy execution.",
+  "views": [
+    {
+      "profile": "OccludedMugRetrieval",
+      "scene_sha256": "41c8cdd7beb0d4eea9ab6dfbbc62ff3b1a80706d723c85a4d892f81cf7fe34a1",
+      "view": "operator_free_camera",
+      "lookat": [
+        -1.281744502229142,
+        -0.10777098089842549,
+        0.5353607954396977
+      ],
+      "distance": 1.15,
+      "azimuth": 90,
+      "elevation": -30.0,
+      "visual_geometry": true,
+      "collision_geometry": false,
+      "sites": false,
+      "policy_execution": false,
+      "image": "OccludedMugRetrieval.scene.jpg",
+      "sha256": "d08ef1f76a8eb01f46080da56652344a565e4a597ba568dc47b2580e0bf31223"
+    },
+    {
+      "profile": "CrowdedRackMugPlacement",
+      "scene_sha256": "43c50ffd33691ffd4c74177fc9c36d3dadb26cb3e611f891aabb27f07c9a02a7",
+      "view": "operator_free_camera",
+      "lookat": [
+        0.006,
+        -0.3235664086503457,
+        0.5900000000000001
+      ],
+      "distance": 1.5,
+      "azimuth": 90,
+      "elevation": -30.0,
+      "visual_geometry": true,
+      "collision_geometry": false,
+      "sites": false,
+      "policy_execution": false,
+      "image": "CrowdedRackMugPlacement.scene.jpg",
+      "sha256": "b18d9674a3d9f5c830bb115fbad289969a540b17fda03b49ad82157b53dbf61b"
+    },
+    {
+      "profile": "ShallowDrawerRetrieval",
+      "scene_sha256": "b2dfb43898d1ddfa32e02885d6a99ae754b095f6ac5f00814e7c4977da65da6a",
+      "view": "operator_free_camera",
+      "lookat": [
+        0.5632991440512647,
+        -0.42854605548622965,
+        0.7156337796935677
+      ],
+      "distance": 1.15,
+      "azimuth": 90,
+      "elevation": -30.0,
+      "visual_geometry": true,
+      "collision_geometry": false,
+      "sites": false,
+      "policy_execution": false,
+      "image": "ShallowDrawerRetrieval.scene.jpg",
+      "sha256": "29851cf32bdfb85c88eecca13835b524397a98395a1951061f15b16ab5883ea4"
+    },
+    {
+      "profile": "CabinetBowlStacking",
+      "scene_sha256": "afa0dbbdce39e95ec13caf0e291d1d751bbd6300e42890158f079c4b6f436cb8",
+      "view": "operator_free_camera",
+      "lookat": [
+        -1.2542003313751147,
+        -0.008959077453408149,
+        0.15315933515792082
+      ],
+      "distance": 1.15,
+      "azimuth": 90,
+      "elevation": -30.0,
+      "visual_geometry": true,
+      "collision_geometry": false,
+      "sites": false,
+      "policy_execution": false,
+      "image": "CabinetBowlStacking.scene.jpg",
+      "sha256": "38f4a426330fa4de238bdbde3484d587bd3c45dc068f63733965675464ebd075"
+    },
+    {
+      "profile": "RestrictedDoorRetrieval",
+      "scene_sha256": "2eb053a72796a771c9688d8a9635d9f2a245331ed2db608e8a78bca5ae2852b3",
+      "view": "operator_free_camera",
+      "lookat": [
+        -1.201833963039666,
+        -0.15182071881960899,
+        0.15943965944889305
+      ],
+      "distance": 1.15,
+      "azimuth": 90,
+      "elevation": -30.0,
+      "visual_geometry": true,
+      "collision_geometry": false,
+      "sites": false,
+      "policy_execution": false,
+      "image": "RestrictedDoorRetrieval.scene.jpg",
+      "sha256": "eb1406d2f9715a3c343bd370f06d59b524e5c3260c3fdba8a681087e4bc3536d"
+    },
+    {
+      "profile": "PlateRackInsertion",
+      "scene_sha256": "4f49a570f95caec3b59ded1ea76d52de4a2b4409a1f6b657b14f2c525f30be60",
+      "view": "operator_free_camera",
+      "lookat": [
+        0.006,
+        -0.3235664086503457,
+        0.5900000000000001
+      ],
+      "distance": 1.5,
+      "azimuth": 90,
+      "elevation": -30.0,
+      "visual_geometry": true,
+      "collision_geometry": false,
+      "sites": false,
+      "policy_execution": false,
+      "image": "PlateRackInsertion.scene.jpg",
+      "sha256": "a1fad745861cf73a68bd88e98c0ce3d556ff12cbb8b3411cad8e64e7ac3ae41b"
+    },
+    {
+      "profile": "CabinetBowlNesting",
+      "scene_sha256": "3b9cbc9dd1de96fe4d67211d0c194531ed2c446a419794ceab9bd9bf4b50f3d3",
+      "view": "operator_free_camera",
+      "lookat": [
+        -1.2574310313802313,
+        -0.10421486873165646,
+        0.5240655779400123
+      ],
+      "distance": 1.15,
+      "azimuth": 90,
+      "elevation": -30.0,
+      "visual_geometry": true,
+      "collision_geometry": false,
+      "sites": false,
+      "policy_execution": false,
+      "image": "CabinetBowlNesting.scene.jpg",
+      "sha256": "9993b8f546325f793d5f767e2537df29247079a4feae7eb3388477d8363fa448"
+    },
+    {
+      "profile": "GuidedTrayInsertion",
+      "scene_sha256": "890acea9205d8766ea6d1f70f8f7bedcb9b40785dd6f50ea80c57481d73251c4",
+      "view": "operator_free_camera",
+      "lookat": [
+        -0.10137626460167481,
+        -3.9697191712741535,
+        0.8826985348277561
+      ],
+      "distance": 1.8,
+      "azimuth": 90,
+      "elevation": -60.0,
+      "visual_geometry": true,
+      "collision_geometry": false,
+      "sites": false,
+      "policy_execution": false,
+      "image": "GuidedTrayInsertion.scene.jpg",
+      "sha256": "6d03571e564d9bc4cf254738d0d633cd1cc78fa8897871c2ef0461ef170c8dd5"
+    },
+    {
+      "profile": "SpongeContactCoverage",
+      "scene_sha256": "424fac0b3dab2a07080385c52954ed49d2f197fecbc35149d1b78950f31d4947",
+      "view": "operator_free_camera",
+      "lookat": [
+        -0.021152337082871828,
+        -3.741017950994788,
+        0.8762196556037766
+      ],
+      "distance": 1.2,
+      "azimuth": 90,
+      "elevation": -60.0,
+      "visual_geometry": true,
+      "collision_geometry": false,
+      "sites": false,
+      "policy_execution": false,
+      "image": "SpongeContactCoverage.scene.jpg",
+      "sha256": "109c61c725cac62f1fda9a8e47373657e2f6b7ae5449bb2cc5f87025821c7780"
+    }
+  ]
+}

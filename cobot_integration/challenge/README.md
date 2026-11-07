@@ -8,6 +8,61 @@ Every profile is **experimental** until its individual scenes pass qualification
 Task implementation, valid resets, witness success, policy evaluation and physical
 validation are separate evidence. The suite does not assume learning will win.
 
+## Ten profiles in two families
+
+**Six constrained-manipulation profiles** test access, clutter, articulation and recovery.
+**Four contact-rich profiles** emphasize insertion, seating and sustained contact.
+The families overlap in capabilities; these are ten profiles, not ten separate families.
+
+![Goal overview of the ten experimental LabApt task profiles](images/task-overview.svg)
+
+### Objects, distractors and difficulty
+
+Values below run **easy → medium → hard**. Each profile samples within its listed
+object categories. A support bowl is part of the goal, rather than a distractor.
+
+| # | Task profile | Objects present | What varies in the current implementation |
+|---|---|---|---|
+| 1 | **Occluded mug retrieval** (`OccludedMugRetrieval`) | 1 target mug + 1 / 2 / 3 protected mugs | Target and protected mug instances, positions and yaw. Prescribed clutter count: 1 → 2 → 3; actual occlusion needs review. |
+| 2 | **Crowded rack mug placement** (`CrowdedRackMugPlacement`) | 1 target mug + 1 / 2 / 2 protected glass cups | Mug/glass instances, positions and yaw. Glass count: 1 → 2 → 2. Declared clearance: 8 → 5 → 2.5 cm; requires reviewed slot geometry. |
+| 3 | **Shallow drawer retrieval** (`ShallowDrawerRetrieval`) | 1 wooden spoon; no extra distractors | Wooden-spoon instance, placement and yaw. Drawer opening: 100% → 75% → 55%; shallow-object fit still needs review. |
+| 4 | **Cabinet bowl stacking** (`CabinetBowlStacking`) | 1 target bowl + 1 support bowl; no extra distractors | Bowl instances, placements and target yaw. Target scale fixed at 0.85; support scale 1.0, inverted. Alignment tolerance: 4 → 2.5 → 1.5 cm. |
+| 5 | **Restricted-door retrieval** (`RestrictedDoorRetrieval`) | 1 mug; no extra distractors | Mug instance, position and yaw. Initial door opening: 65% → 45% → 25%. Cabinet remains the measured left-base cabinet. |
+| 6 | **Imperfect-grasp recovery** (`ImperfectGraspRecovery`) | 1 mug; no extra distractors | Mug instance and recorded physical grasp checkpoint. Desired grasp offset: 0.5 → 1.5 → 2.5 cm. No recovery reset image or grasp recording yet. |
+| 7 | **Plate rack insertion** (`PlateRackInsertion`) | 1 plate; no extra distractors | Plate instance, position and yaw. Declared clearance: 3 → 2 → 1 cm; slot bounds/orientation require reviewed geometry. Rack tines do not automatically move. |
+| 8 | **Cabinet bowl nesting** (`CabinetBowlNesting`) | 1 target bowl + 1 support bowl; no extra distractors | Bowl instances, positions and yaw. Target scale fixed at 0.70; support scale 1.0, upright. Alignment tolerance: 3.5 → 2 → 1.2 cm. |
+| 9 | **Guided tray insertion** (`GuidedTrayInsertion`) | 1 oven tray + fixed guide apparatus; no extra distractors | Oven-tray instance and starting position; initial yaw fixed relative to the table. Guide clearance physically changes: 3 → 2 → 1 cm, sized to the sampled tray. |
+| 10 | **Sponge contact coverage** (`SpongeContactCoverage`) | 1 sponge + marked patch; no extra distractors | Sponge instance, position and yaw. Patch width: 12 → 18 → 24 cm; depth fixed at 20 cm. Goal is ≥90% contact coverage, followed by stable release. |
+
+### Shared randomization boundaries
+
+- **Sampled:** installed native object instances from the target asset split, bounded starting positions, and native starting yaw (normally −45° to +45° in the placement frame). Tray starting yaw is fixed. Model shape/size can differ between instances.
+- **Fixed:** measured layout 100, walls, fixture dimensions/poses/appearance, table finish, object categories per profile, and the stated object scale factors. There is no additional friction perturbation, blanket fixture/material randomization or arbitrary extra clutter.
+- **Distractors:** only occluded mug retrieval and crowded-rack mug placement currently add protected distractors. Their displacement limit is 2.5 cm and tilt limit is 0.15 rad. Other profiles do not silently add background objects.
+- **Difficulty controls:** drawer/door opening, bowl alignment tolerances, tray-guide clearance and wiping-patch size are applied by the implementation. Rack-clearance values require an asset-specific geometry configuration and fit review; they do not automatically alter the measured rack. Occlusion and shallow-object suitability also require review.
+- **Fixture selection:** cabinet tasks use the measured left-base cabinet; the drawer task uses the native eligible `TOP_DRAWER` selector. Rack tasks use the existing dishwasher. Mug-to-rack, plate, bowl, tray, sponge and recovery source surfaces use the dining table. Fixture selection is not a sweep over every cabinet.
+- **Initialization:** full-workflow and manipulation-only modes are separate. Manipulation-only starts require recorded physical approach actions; recovery also requires a recorded offset grasp. A new seed does not create a new kitchen.
+
+### Actual development reset images
+
+These are **operator free-camera views of frozen starting scenes**, one easy workflow seed per profile. They are documentation views, separate from the policy camera observations.
+They do not show completed tasks, every object, or every difficulty level.
+The goal overview above explains the intended outcome when the target is occluded
+or at a different station. All profiles remain experimental.
+
+| Task | Development reset |
+|---|---|
+| **1. Occluded mug retrieval** | ![Occluded mug retrieval: easy workflow starting scene](images/OccludedMugRetrieval.scene.jpg) |
+| **2. Crowded rack mug placement** | ![Crowded rack mug placement: easy workflow starting scene](images/CrowdedRackMugPlacement.scene.jpg) |
+| **3. Shallow drawer retrieval** | ![Shallow drawer retrieval: easy workflow starting scene](images/ShallowDrawerRetrieval.scene.jpg) |
+| **4. Cabinet bowl stacking** | ![Cabinet bowl stacking: easy workflow starting scene](images/CabinetBowlStacking.scene.jpg) |
+| **5. Restricted-door retrieval** | ![Restricted-door retrieval: easy workflow starting scene](images/RestrictedDoorRetrieval.scene.jpg) |
+| **6. Imperfect-grasp recovery** | Pending a physically recorded imperfect grasp; no simulated reset photograph is claimed. |
+| **7. Plate rack insertion** | ![Plate rack insertion: easy workflow starting scene](images/PlateRackInsertion.scene.jpg) |
+| **8. Cabinet bowl nesting** | ![Cabinet bowl nesting: easy workflow starting scene](images/CabinetBowlNesting.scene.jpg) |
+| **9. Guided tray insertion** | ![Guided tray insertion: easy workflow starting scene](images/GuidedTrayInsertion.scene.jpg) |
+| **10. Sponge contact coverage** | ![Sponge contact coverage: easy workflow starting scene](images/SpongeContactCoverage.scene.jpg) |
+
 ## Commands
 
 Run with the RoboCasa dependency interpreter from this checkout:

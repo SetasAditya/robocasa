@@ -99,3 +99,6 @@ The measured lab kitchen is registered as layout 100 (`LayoutType.LAYOUT100` / `
 The versioned [LabApt challenge suite](challenge/README.md) adds ten custom task
 profiles with frozen-scene qualification and a common controller interface.
 Its experimental profiles are separate from native tasks and historical scores.
+
+See the [illustrated ten-profile catalog](challenge/README.md#ten-profiles-in-two-families)
+for scene images and the exact object/distractor randomizations.

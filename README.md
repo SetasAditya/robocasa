@@ -22,6 +22,22 @@ pending after NFS startup stalls; see the
 [verification record](cobot_integration/VERIFICATION.json). Successful manipulation,
 automatic trajectory expansion and VLA training require further qualification.
 
+
+## LabApt manipulation challenge
+
+The experimental challenge adds **10 task profiles in 2 families**, separate from
+the eight existing collection families above. See the
+[illustrated task catalog and randomization table](cobot_integration/challenge/README.md#ten-profiles-in-two-families)
+for all ten goals, actual reset images, object categories and distractor counts.
+
+![Ten LabApt task profiles grouped into constrained and contact-rich manipulation](cobot_integration/challenge/images/task-overview.svg)
+
+Development starting scenes:
+
+| Cabinet retrieval | Guided tray insertion |
+|---|---|
+| ![Cabinet retrieval starting scene](cobot_integration/challenge/images/OccludedMugRetrieval.scene.jpg) | ![Tray and guide apparatus starting scene](cobot_integration/challenge/images/GuidedTrayInsertion.scene.jpg) |
+
 ---
 
 <h1 align="center">RoboCasa</h1>
