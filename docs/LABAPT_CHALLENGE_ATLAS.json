@@ -1,0 +1,1110 @@
+{
+  "version": "labapt-challenge-v1",
+  "robocasa_commit": null,
+  "profiles": [
+    {
+      "profile": "OccludedMugRetrieval",
+      "variants": [
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "OccludedMugRetrieval",
+          "env_name": "LabAptOccludedMugRetrieval",
+          "family": "constrained",
+          "instruction": "Retrieve the mug from behind the protected objects and release it on the counter.",
+          "kind": "cabinet",
+          "obj_group": "mug",
+          "difficulty": "easy",
+          "mode": "workflow",
+          "primary_axis": "occlusion",
+          "parameters": {
+            "occlusion": 1
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "OccludedMugRetrieval",
+          "env_name": "LabAptOccludedMugRetrieval",
+          "family": "constrained",
+          "instruction": "Retrieve the mug from behind the protected objects and release it on the counter.",
+          "kind": "cabinet",
+          "obj_group": "mug",
+          "difficulty": "medium",
+          "mode": "workflow",
+          "primary_axis": "occlusion",
+          "parameters": {
+            "occlusion": 2
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "OccludedMugRetrieval",
+          "env_name": "LabAptOccludedMugRetrieval",
+          "family": "constrained",
+          "instruction": "Retrieve the mug from behind the protected objects and release it on the counter.",
+          "kind": "cabinet",
+          "obj_group": "mug",
+          "difficulty": "hard",
+          "mode": "workflow",
+          "primary_axis": "occlusion",
+          "parameters": {
+            "occlusion": 3
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        }
+      ],
+      "validation": {
+        "task": "OccludedMugRetrieval",
+        "status": "validated_reset",
+        "result": {
+          "scene_sha256": "41c8cdd7beb0d4eea9ab6dfbbc62ff3b1a80706d723c85a4d892f81cf7fe34a1",
+          "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+          "checks": {
+            "initially_incomplete": true,
+            "initial_contacts": true,
+            "initial_fixture_contacts": true,
+            "replay": true,
+            "mobilebase0_kinect": true,
+            "robot0_eye_in_hand": true,
+            "passive_stability": true,
+            "physical_fit_review": false,
+            "witness": false
+          },
+          "qualified": false,
+          "status": "experimental"
+        },
+        "tail": "",
+        "reset_image_sha256": "41e31c36b4a578a72ef3ca1d08252621039bd6d393489dbbc94d8c0d9997411e"
+      }
+    },
+    {
+      "profile": "CrowdedRackMugPlacement",
+      "variants": [
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "CrowdedRackMugPlacement",
+          "env_name": "LabAptCrowdedRackMugPlacement",
+          "family": "constrained",
+          "instruction": "Place the mug upright in the marked dishwasher rack region without moving the protected dishes.",
+          "kind": "rack",
+          "obj_group": "mug",
+          "difficulty": "easy",
+          "mode": "workflow",
+          "primary_axis": "clearance_m",
+          "parameters": {
+            "clearance_m": 0.08
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "CrowdedRackMugPlacement",
+          "env_name": "LabAptCrowdedRackMugPlacement",
+          "family": "constrained",
+          "instruction": "Place the mug upright in the marked dishwasher rack region without moving the protected dishes.",
+          "kind": "rack",
+          "obj_group": "mug",
+          "difficulty": "medium",
+          "mode": "workflow",
+          "primary_axis": "clearance_m",
+          "parameters": {
+            "clearance_m": 0.05
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "CrowdedRackMugPlacement",
+          "env_name": "LabAptCrowdedRackMugPlacement",
+          "family": "constrained",
+          "instruction": "Place the mug upright in the marked dishwasher rack region without moving the protected dishes.",
+          "kind": "rack",
+          "obj_group": "mug",
+          "difficulty": "hard",
+          "mode": "workflow",
+          "primary_axis": "clearance_m",
+          "parameters": {
+            "clearance_m": 0.025
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        }
+      ],
+      "validation": {
+        "task": "CrowdedRackMugPlacement",
+        "status": "validated_reset",
+        "result": {
+          "scene_sha256": "43c50ffd33691ffd4c74177fc9c36d3dadb26cb3e611f891aabb27f07c9a02a7",
+          "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+          "checks": {
+            "initially_incomplete": true,
+            "initial_contacts": true,
+            "initial_fixture_contacts": true,
+            "replay": true,
+            "mobilebase0_kinect": true,
+            "robot0_eye_in_hand": true,
+            "passive_stability": true,
+            "physical_fit_review": false,
+            "witness": false
+          },
+          "qualified": false,
+          "status": "experimental"
+        },
+        "tail": "",
+        "reset_image_sha256": "de9c43537978a55fdfd6ca2c89e2da4c761c48fd54a339d1a1cda46cf86317b5"
+      }
+    },
+    {
+      "profile": "ShallowDrawerRetrieval",
+      "variants": [
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "ShallowDrawerRetrieval",
+          "env_name": "LabAptShallowDrawerRetrieval",
+          "family": "constrained",
+          "instruction": "Retrieve the shallow utensil from the drawer and release it on the counter.",
+          "kind": "drawer",
+          "obj_group": "wooden_spoon",
+          "difficulty": "easy",
+          "mode": "workflow",
+          "primary_axis": "drawer_open_fraction",
+          "parameters": {
+            "drawer_open_fraction": 1.0
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "ShallowDrawerRetrieval",
+          "env_name": "LabAptShallowDrawerRetrieval",
+          "family": "constrained",
+          "instruction": "Retrieve the shallow utensil from the drawer and release it on the counter.",
+          "kind": "drawer",
+          "obj_group": "wooden_spoon",
+          "difficulty": "medium",
+          "mode": "workflow",
+          "primary_axis": "drawer_open_fraction",
+          "parameters": {
+            "drawer_open_fraction": 0.75
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "ShallowDrawerRetrieval",
+          "env_name": "LabAptShallowDrawerRetrieval",
+          "family": "constrained",
+          "instruction": "Retrieve the shallow utensil from the drawer and release it on the counter.",
+          "kind": "drawer",
+          "obj_group": "wooden_spoon",
+          "difficulty": "hard",
+          "mode": "workflow",
+          "primary_axis": "drawer_open_fraction",
+          "parameters": {
+            "drawer_open_fraction": 0.55
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        }
+      ],
+      "validation": {
+        "task": "ShallowDrawerRetrieval",
+        "status": "validated_reset",
+        "result": {
+          "scene_sha256": "b2dfb43898d1ddfa32e02885d6a99ae754b095f6ac5f00814e7c4977da65da6a",
+          "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+          "checks": {
+            "initially_incomplete": true,
+            "initial_contacts": true,
+            "initial_fixture_contacts": true,
+            "replay": true,
+            "mobilebase0_kinect": true,
+            "robot0_eye_in_hand": true,
+            "passive_stability": true,
+            "physical_fit_review": false,
+            "witness": false
+          },
+          "qualified": false,
+          "status": "experimental",
+          "sensor_contract_passed": true,
+          "independent_action_replay_passed": true
+        },
+        "tail": "",
+        "reset_image_sha256": "4861466a79d41fca3b8da9f54af77626783b6d84bec408cc298e21a1c766d156"
+      }
+    },
+    {
+      "profile": "CabinetBowlStacking",
+      "variants": [
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "CabinetBowlStacking",
+          "env_name": "LabAptCabinetBowlStacking",
+          "family": "constrained",
+          "instruction": "Build a stable two-bowl stack in the cabinet, with the target bowl upright on the inverted support bowl; do not nest them.",
+          "kind": "stack",
+          "obj_group": "bowl",
+          "difficulty": "easy",
+          "mode": "workflow",
+          "primary_axis": "alignment_tolerance_m",
+          "parameters": {
+            "alignment_tolerance_m": 0.04
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "CabinetBowlStacking",
+          "env_name": "LabAptCabinetBowlStacking",
+          "family": "constrained",
+          "instruction": "Build a stable two-bowl stack in the cabinet, with the target bowl upright on the inverted support bowl; do not nest them.",
+          "kind": "stack",
+          "obj_group": "bowl",
+          "difficulty": "medium",
+          "mode": "workflow",
+          "primary_axis": "alignment_tolerance_m",
+          "parameters": {
+            "alignment_tolerance_m": 0.025
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "CabinetBowlStacking",
+          "env_name": "LabAptCabinetBowlStacking",
+          "family": "constrained",
+          "instruction": "Build a stable two-bowl stack in the cabinet, with the target bowl upright on the inverted support bowl; do not nest them.",
+          "kind": "stack",
+          "obj_group": "bowl",
+          "difficulty": "hard",
+          "mode": "workflow",
+          "primary_axis": "alignment_tolerance_m",
+          "parameters": {
+            "alignment_tolerance_m": 0.015
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        }
+      ],
+      "validation": {
+        "task": "CabinetBowlStacking",
+        "status": "validated_reset",
+        "result": {
+          "scene_sha256": "afa0dbbdce39e95ec13caf0e291d1d751bbd6300e42890158f079c4b6f436cb8",
+          "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+          "checks": {
+            "initially_incomplete": true,
+            "initial_contacts": true,
+            "initial_fixture_contacts": true,
+            "replay": true,
+            "mobilebase0_kinect": true,
+            "robot0_eye_in_hand": true,
+            "passive_stability": true,
+            "physical_fit_review": false,
+            "witness": false
+          },
+          "qualified": false,
+          "status": "experimental"
+        },
+        "tail": "",
+        "reset_image_sha256": "8d93b96aa2b8f2cc70993bfeb15e0b11132dbe731f7c33beec0593c4e9632d7b"
+      }
+    },
+    {
+      "profile": "RestrictedDoorRetrieval",
+      "variants": [
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "RestrictedDoorRetrieval",
+          "env_name": "LabAptRestrictedDoorRetrieval",
+          "family": "constrained",
+          "instruction": "Open the partially open cabinet further, retrieve the mug, and release it on the counter.",
+          "kind": "door",
+          "obj_group": "mug",
+          "difficulty": "easy",
+          "mode": "workflow",
+          "primary_axis": "door_open_fraction",
+          "parameters": {
+            "door_open_fraction": 0.65
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "RestrictedDoorRetrieval",
+          "env_name": "LabAptRestrictedDoorRetrieval",
+          "family": "constrained",
+          "instruction": "Open the partially open cabinet further, retrieve the mug, and release it on the counter.",
+          "kind": "door",
+          "obj_group": "mug",
+          "difficulty": "medium",
+          "mode": "workflow",
+          "primary_axis": "door_open_fraction",
+          "parameters": {
+            "door_open_fraction": 0.45
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "RestrictedDoorRetrieval",
+          "env_name": "LabAptRestrictedDoorRetrieval",
+          "family": "constrained",
+          "instruction": "Open the partially open cabinet further, retrieve the mug, and release it on the counter.",
+          "kind": "door",
+          "obj_group": "mug",
+          "difficulty": "hard",
+          "mode": "workflow",
+          "primary_axis": "door_open_fraction",
+          "parameters": {
+            "door_open_fraction": 0.25
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        }
+      ],
+      "validation": {
+        "task": "RestrictedDoorRetrieval",
+        "status": "validated_reset",
+        "result": {
+          "scene_sha256": "2eb053a72796a771c9688d8a9635d9f2a245331ed2db608e8a78bca5ae2852b3",
+          "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+          "checks": {
+            "initially_incomplete": true,
+            "initial_contacts": true,
+            "initial_fixture_contacts": true,
+            "replay": true,
+            "mobilebase0_kinect": true,
+            "robot0_eye_in_hand": true,
+            "passive_stability": true,
+            "physical_fit_review": false,
+            "witness": false
+          },
+          "qualified": false,
+          "status": "experimental"
+        },
+        "tail": "",
+        "reset_image_sha256": "0457036478274607606c8fb6316ba28029103ff0d75d390b98a7cc1df695957c"
+      }
+    },
+    {
+      "profile": "ImperfectGraspRecovery",
+      "variants": [
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "ImperfectGraspRecovery",
+          "env_name": "LabAptImperfectGraspRecovery",
+          "family": "constrained",
+          "instruction": "Recover the imperfect grasp and release the mug upright on the marked counter region.",
+          "kind": "recovery",
+          "obj_group": "mug",
+          "difficulty": "easy",
+          "mode": "workflow",
+          "primary_axis": "grasp_offset_m",
+          "parameters": {
+            "grasp_offset_m": 0.005
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "ImperfectGraspRecovery",
+          "env_name": "LabAptImperfectGraspRecovery",
+          "family": "constrained",
+          "instruction": "Recover the imperfect grasp and release the mug upright on the marked counter region.",
+          "kind": "recovery",
+          "obj_group": "mug",
+          "difficulty": "medium",
+          "mode": "workflow",
+          "primary_axis": "grasp_offset_m",
+          "parameters": {
+            "grasp_offset_m": 0.015
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "ImperfectGraspRecovery",
+          "env_name": "LabAptImperfectGraspRecovery",
+          "family": "constrained",
+          "instruction": "Recover the imperfect grasp and release the mug upright on the marked counter region.",
+          "kind": "recovery",
+          "obj_group": "mug",
+          "difficulty": "hard",
+          "mode": "workflow",
+          "primary_axis": "grasp_offset_m",
+          "parameters": {
+            "grasp_offset_m": 0.025
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        }
+      ],
+      "validation": {
+        "task": "ImperfectGraspRecovery",
+        "status": "requires_physical_grasp_initialization",
+        "qualified": false
+      }
+    },
+    {
+      "profile": "PlateRackInsertion",
+      "variants": [
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "PlateRackInsertion",
+          "env_name": "LabAptPlateRackInsertion",
+          "family": "contact",
+          "instruction": "Insert the plate upright into the marked dishwasher rack slot and release it stably.",
+          "kind": "plate",
+          "obj_group": "plate",
+          "difficulty": "easy",
+          "mode": "workflow",
+          "primary_axis": "clearance_m",
+          "parameters": {
+            "clearance_m": 0.03
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "PlateRackInsertion",
+          "env_name": "LabAptPlateRackInsertion",
+          "family": "contact",
+          "instruction": "Insert the plate upright into the marked dishwasher rack slot and release it stably.",
+          "kind": "plate",
+          "obj_group": "plate",
+          "difficulty": "medium",
+          "mode": "workflow",
+          "primary_axis": "clearance_m",
+          "parameters": {
+            "clearance_m": 0.02
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "PlateRackInsertion",
+          "env_name": "LabAptPlateRackInsertion",
+          "family": "contact",
+          "instruction": "Insert the plate upright into the marked dishwasher rack slot and release it stably.",
+          "kind": "plate",
+          "obj_group": "plate",
+          "difficulty": "hard",
+          "mode": "workflow",
+          "primary_axis": "clearance_m",
+          "parameters": {
+            "clearance_m": 0.01
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        }
+      ],
+      "validation": {
+        "task": "PlateRackInsertion",
+        "status": "validated_reset",
+        "result": {
+          "scene_sha256": "4f49a570f95caec3b59ded1ea76d52de4a2b4409a1f6b657b14f2c525f30be60",
+          "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+          "checks": {
+            "initially_incomplete": true,
+            "initial_contacts": true,
+            "initial_fixture_contacts": true,
+            "replay": true,
+            "mobilebase0_kinect": true,
+            "robot0_eye_in_hand": true,
+            "passive_stability": true,
+            "physical_fit_review": false,
+            "witness": false
+          },
+          "qualified": false,
+          "status": "experimental"
+        },
+        "tail": "",
+        "reset_image_sha256": "35acaea7f50e96e799aea81927d9b27d414e486b1ea06ab2c357fd85e7932740"
+      }
+    },
+    {
+      "profile": "CabinetBowlNesting",
+      "variants": [
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "CabinetBowlNesting",
+          "env_name": "LabAptCabinetBowlNesting",
+          "family": "contact",
+          "instruction": "Seat the target bowl inside the support bowl in the cabinet, then release it.",
+          "kind": "nest",
+          "obj_group": "bowl",
+          "difficulty": "easy",
+          "mode": "workflow",
+          "primary_axis": "alignment_tolerance_m",
+          "parameters": {
+            "alignment_tolerance_m": 0.035
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "CabinetBowlNesting",
+          "env_name": "LabAptCabinetBowlNesting",
+          "family": "contact",
+          "instruction": "Seat the target bowl inside the support bowl in the cabinet, then release it.",
+          "kind": "nest",
+          "obj_group": "bowl",
+          "difficulty": "medium",
+          "mode": "workflow",
+          "primary_axis": "alignment_tolerance_m",
+          "parameters": {
+            "alignment_tolerance_m": 0.02
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "CabinetBowlNesting",
+          "env_name": "LabAptCabinetBowlNesting",
+          "family": "contact",
+          "instruction": "Seat the target bowl inside the support bowl in the cabinet, then release it.",
+          "kind": "nest",
+          "obj_group": "bowl",
+          "difficulty": "hard",
+          "mode": "workflow",
+          "primary_axis": "alignment_tolerance_m",
+          "parameters": {
+            "alignment_tolerance_m": 0.012
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        }
+      ],
+      "validation": {
+        "task": "CabinetBowlNesting",
+        "status": "validated_reset",
+        "result": {
+          "scene_sha256": "3b9cbc9dd1de96fe4d67211d0c194531ed2c446a419794ceab9bd9bf4b50f3d3",
+          "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+          "checks": {
+            "initially_incomplete": true,
+            "initial_contacts": true,
+            "initial_fixture_contacts": true,
+            "replay": true,
+            "mobilebase0_kinect": true,
+            "robot0_eye_in_hand": true,
+            "passive_stability": true,
+            "physical_fit_review": false,
+            "witness": false
+          },
+          "qualified": false,
+          "status": "experimental"
+        },
+        "tail": "",
+        "reset_image_sha256": "bb66274ec21ffe74413573b660ebc6b1d5778da2f4dc98c4f7d3e6f4d7579a98"
+      }
+    },
+    {
+      "profile": "GuidedTrayInsertion",
+      "variants": [
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "GuidedTrayInsertion",
+          "env_name": "LabAptGuidedTrayInsertion",
+          "family": "contact",
+          "instruction": "Slide the tray into the blue countertop guides, seat it against the back stop, then release it.",
+          "kind": "tray",
+          "obj_group": "oven_tray",
+          "difficulty": "easy",
+          "mode": "workflow",
+          "primary_axis": "clearance_m",
+          "parameters": {
+            "clearance_m": 0.03
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "GuidedTrayInsertion",
+          "env_name": "LabAptGuidedTrayInsertion",
+          "family": "contact",
+          "instruction": "Slide the tray into the blue countertop guides, seat it against the back stop, then release it.",
+          "kind": "tray",
+          "obj_group": "oven_tray",
+          "difficulty": "medium",
+          "mode": "workflow",
+          "primary_axis": "clearance_m",
+          "parameters": {
+            "clearance_m": 0.02
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "GuidedTrayInsertion",
+          "env_name": "LabAptGuidedTrayInsertion",
+          "family": "contact",
+          "instruction": "Slide the tray into the blue countertop guides, seat it against the back stop, then release it.",
+          "kind": "tray",
+          "obj_group": "oven_tray",
+          "difficulty": "hard",
+          "mode": "workflow",
+          "primary_axis": "clearance_m",
+          "parameters": {
+            "clearance_m": 0.01
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        }
+      ],
+      "validation": {
+        "task": "GuidedTrayInsertion",
+        "status": "validated_reset",
+        "result": {
+          "scene_sha256": "890acea9205d8766ea6d1f70f8f7bedcb9b40785dd6f50ea80c57481d73251c4",
+          "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+          "checks": {
+            "initially_incomplete": true,
+            "initial_contacts": true,
+            "initial_fixture_contacts": true,
+            "replay": true,
+            "mobilebase0_kinect": true,
+            "robot0_eye_in_hand": true,
+            "passive_stability": true,
+            "physical_fit_review": false,
+            "witness": false
+          },
+          "qualified": false,
+          "status": "experimental"
+        },
+        "tail": "",
+        "reset_image_sha256": "34e3d68f4c83032a9333991b5aa5e94deb917b3ebfa417c1bf0f5ea97a17268e"
+      }
+    },
+    {
+      "profile": "SpongeContactCoverage",
+      "variants": [
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "SpongeContactCoverage",
+          "env_name": "LabAptSpongeContactCoverage",
+          "family": "contact",
+          "instruction": "Grasp the sponge and wipe at least 90 percent of the marked patch through physical contact, then release it on the counter.",
+          "kind": "wipe",
+          "obj_group": "sponge",
+          "difficulty": "easy",
+          "mode": "workflow",
+          "primary_axis": "patch_width_m",
+          "parameters": {
+            "patch_width_m": 0.12
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "SpongeContactCoverage",
+          "env_name": "LabAptSpongeContactCoverage",
+          "family": "contact",
+          "instruction": "Grasp the sponge and wipe at least 90 percent of the marked patch through physical contact, then release it on the counter.",
+          "kind": "wipe",
+          "obj_group": "sponge",
+          "difficulty": "medium",
+          "mode": "workflow",
+          "primary_axis": "patch_width_m",
+          "parameters": {
+            "patch_width_m": 0.18
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        },
+        {
+          "version": "labapt-challenge-v1",
+          "profile": "SpongeContactCoverage",
+          "env_name": "LabAptSpongeContactCoverage",
+          "family": "contact",
+          "instruction": "Grasp the sponge and wipe at least 90 percent of the marked patch through physical contact, then release it on the counter.",
+          "kind": "wipe",
+          "obj_group": "sponge",
+          "difficulty": "hard",
+          "mode": "workflow",
+          "primary_axis": "patch_width_m",
+          "parameters": {
+            "patch_width_m": 0.24
+          },
+          "layout": 100,
+          "style": 1,
+          "control_hz": 20,
+          "horizon": 1800,
+          "stable_seconds": 1.0,
+          "linear_speed_limit_m_s": 0.025,
+          "angular_speed_limit_rad_s": 0.15,
+          "protected_displacement_m": 0.025,
+          "protected_tilt_rad": 0.15,
+          "max_penetration_m": 0.005,
+          "status": "experimental",
+          "qualification": "requires_frozen_scene_and_witness",
+          "physical_validation": false
+        }
+      ],
+      "validation": {
+        "task": "SpongeContactCoverage",
+        "status": "validated_reset",
+        "result": {
+          "scene_sha256": "424fac0b3dab2a07080385c52954ed49d2f197fecbc35149d1b78950f31d4947",
+          "source_sha256": "9489ce73977dbde5e5b5b786956084c28165bbdeb1de6213a084e92b5b5c0d01",
+          "checks": {
+            "initially_incomplete": true,
+            "initial_contacts": true,
+            "initial_fixture_contacts": true,
+            "replay": true,
+            "mobilebase0_kinect": true,
+            "robot0_eye_in_hand": true,
+            "passive_stability": true,
+            "physical_fit_review": false,
+            "witness": false
+          },
+          "qualified": false,
+          "status": "experimental"
+        },
+        "tail": "",
+        "reset_image_sha256": "48d69d426d7f3afe358c5cc31fc9372e17cd6fe52dbb26b733f6c37d6c6de971"
+      }
+    }
+  ]
+}

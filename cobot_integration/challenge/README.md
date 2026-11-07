@@ -63,6 +63,19 @@ or at a different station. All profiles remain experimental.
 | **9. Guided tray insertion** | ![Guided tray insertion: easy workflow starting scene](images/GuidedTrayInsertion.scene.jpg) |
 | **10. Sponge contact coverage** | ![Sponge contact coverage: easy workflow starting scene](images/SpongeContactCoverage.scene.jpg) |
 
+## Interactive atlas
+
+The [challenge atlas](../../docs/LABAPT_CHALLENGE_ATLAS.html) provides filterable
+task cards and development-scene views. The suite, atlas and documentation live
+in this RoboCasa branch.
+
+Regenerate it from the repository root:
+
+```bash
+python scripts/build_labapt_challenge_atlas.py --robocasa-root . \
+  --evidence cobot_integration/challenge/VALIDATION.json
+```
+
 ## Commands
 
 Run with the RoboCasa dependency interpreter from this checkout:

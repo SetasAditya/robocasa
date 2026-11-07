@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LabApt manipulation challenge atlas</title><style>body{font:16px/1.6 system-ui;background:#fafbf7;color:#213930;max-width:1150px;margin:auto;padding:32px}a{color:inherit}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}article{background:white;border:1px solid #dde4d9;border-radius:16px;padding:24px}h2{font-size:21px;overflow-wrap:anywhere}small,dt{color:#68766c}figure{margin:0}img{width:100%;border-radius:8px}figcaption{font-size:12px;color:#68766c}dd{margin:4px 0 18px}button{padding:10px;margin:0 8px 20px 0}aside{border-left:4px solid #71945a;padding:12px 20px;background:#eef2e9}</style>
+<a href="../cobot_integration/challenge/README.md">← Task catalog and randomization guide</a><h1>LabApt manipulation challenge</h1>
+<p>Ten task profiles · two overlapping families · three difficulty levels · measured layout 100.</p>
+<aside>Every profile starts experimental. A scored scene requires verified geometry, cameras, stable reset, complete state replay and a successful witness replay. Policy results and physical validation are separate evidence.</aside>
+<h2>What changes?</h2><p>Kitchen geometry stays fixed. Task objects, constrained placements and recorded initialization checkpoints vary. Numerical ranges are development defaults and must pass geometry review before formal scene freezing.</p>
+<button onclick="filter('all')">All ten</button><button onclick="filter('constrained')">Constrained manipulation</button><button onclick="filter('contact')">Contact-rich manipulation</button>
+<section class="grid"><article data-family="constrained"><small>CONSTRAINED · CUSTOM TASK · EXPERIMENTAL</small>
+<h2>OccludedMugRetrieval</h2><figure><img loading="lazy" src="../cobot_integration/challenge/images/OccludedMugRetrieval.scene.jpg" alt="Development reset for OccludedMugRetrieval"><figcaption>Development reset · starting scene only</figcaption></figure><p>Retrieve the mug from behind the protected objects and release it on the counter.</p>
+<dl><dt>Primary variation · easy → medium → hard</dt><dd>occlusion: 1 → 2 → 3</dd>
+<dt>Initialization</dt><dd>Full workflow / manipulation checkpoint</dd>
+<dt>Evidence</dt><dd>Runtime: validated_reset; automated checks 7/7. Geometry review and witness pending.</dd></dl></article><article data-family="constrained"><small>CONSTRAINED · CUSTOM TASK · EXPERIMENTAL</small>
+<h2>CrowdedRackMugPlacement</h2><figure><img loading="lazy" src="../cobot_integration/challenge/images/CrowdedRackMugPlacement.scene.jpg" alt="Development reset for CrowdedRackMugPlacement"><figcaption>Development reset · starting scene only</figcaption></figure><p>Place the mug upright in the marked dishwasher rack region without moving the protected dishes.</p>
+<dl><dt>Primary variation · easy → medium → hard</dt><dd>clearance_m: 0.08 → 0.05 → 0.025</dd>
+<dt>Initialization</dt><dd>Full workflow / manipulation checkpoint</dd>
+<dt>Evidence</dt><dd>Runtime: validated_reset; automated checks 7/7. Geometry review and witness pending.</dd></dl></article><article data-family="constrained"><small>CONSTRAINED · CUSTOM TASK · EXPERIMENTAL</small>
+<h2>ShallowDrawerRetrieval</h2><figure><img loading="lazy" src="../cobot_integration/challenge/images/ShallowDrawerRetrieval.scene.jpg" alt="Development reset for ShallowDrawerRetrieval"><figcaption>Development reset · starting scene only</figcaption></figure><p>Retrieve the shallow utensil from the drawer and release it on the counter.</p>
+<dl><dt>Primary variation · easy → medium → hard</dt><dd>drawer_open_fraction: 1.0 → 0.75 → 0.55</dd>
+<dt>Initialization</dt><dd>Full workflow / manipulation checkpoint</dd>
+<dt>Evidence</dt><dd>Runtime: validated_reset; automated checks 7/7. Geometry review and witness pending.</dd></dl></article><article data-family="constrained"><small>CONSTRAINED · CUSTOM TASK · EXPERIMENTAL</small>
+<h2>CabinetBowlStacking</h2><figure><img loading="lazy" src="../cobot_integration/challenge/images/CabinetBowlStacking.scene.jpg" alt="Development reset for CabinetBowlStacking"><figcaption>Development reset · starting scene only</figcaption></figure><p>Build a stable two-bowl stack in the cabinet, with the target bowl upright on the inverted support bowl; do not nest them.</p>
+<dl><dt>Primary variation · easy → medium → hard</dt><dd>alignment_tolerance_m: 0.04 → 0.025 → 0.015</dd>
+<dt>Initialization</dt><dd>Full workflow / manipulation checkpoint</dd>
+<dt>Evidence</dt><dd>Runtime: validated_reset; automated checks 7/7. Geometry review and witness pending.</dd></dl></article><article data-family="constrained"><small>CONSTRAINED · CUSTOM TASK · EXPERIMENTAL</small>
+<h2>RestrictedDoorRetrieval</h2><figure><img loading="lazy" src="../cobot_integration/challenge/images/RestrictedDoorRetrieval.scene.jpg" alt="Development reset for RestrictedDoorRetrieval"><figcaption>Development reset · starting scene only</figcaption></figure><p>Open the partially open cabinet further, retrieve the mug, and release it on the counter.</p>
+<dl><dt>Primary variation · easy → medium → hard</dt><dd>door_open_fraction: 0.65 → 0.45 → 0.25</dd>
+<dt>Initialization</dt><dd>Full workflow / manipulation checkpoint</dd>
+<dt>Evidence</dt><dd>Runtime: validated_reset; automated checks 7/7. Geometry review and witness pending.</dd></dl></article><article data-family="constrained"><small>CONSTRAINED · CUSTOM TASK · EXPERIMENTAL</small>
+<h2>ImperfectGraspRecovery</h2><p>Recover the imperfect grasp and release the mug upright on the marked counter region.</p>
+<dl><dt>Primary variation · easy → medium → hard</dt><dd>grasp_offset_m: 0.005 → 0.015 → 0.025</dd>
+<dt>Initialization</dt><dd>Full workflow / manipulation checkpoint</dd>
+<dt>Evidence</dt><dd>Runtime: requires_physical_grasp_initialization; automated checks 0/0. Geometry review and witness pending.</dd></dl></article><article data-family="contact"><small>CONTACT · CUSTOM TASK · EXPERIMENTAL</small>
+<h2>PlateRackInsertion</h2><figure><img loading="lazy" src="../cobot_integration/challenge/images/PlateRackInsertion.scene.jpg" alt="Development reset for PlateRackInsertion"><figcaption>Development reset · starting scene only</figcaption></figure><p>Insert the plate upright into the marked dishwasher rack slot and release it stably.</p>
+<dl><dt>Primary variation · easy → medium → hard</dt><dd>clearance_m: 0.03 → 0.02 → 0.01</dd>
+<dt>Initialization</dt><dd>Full workflow / manipulation checkpoint</dd>
+<dt>Evidence</dt><dd>Runtime: validated_reset; automated checks 7/7. Geometry review and witness pending.</dd></dl></article><article data-family="contact"><small>CONTACT · CUSTOM TASK · EXPERIMENTAL</small>
+<h2>CabinetBowlNesting</h2><figure><img loading="lazy" src="../cobot_integration/challenge/images/CabinetBowlNesting.scene.jpg" alt="Development reset for CabinetBowlNesting"><figcaption>Development reset · starting scene only</figcaption></figure><p>Seat the target bowl inside the support bowl in the cabinet, then release it.</p>
+<dl><dt>Primary variation · easy → medium → hard</dt><dd>alignment_tolerance_m: 0.035 → 0.02 → 0.012</dd>
+<dt>Initialization</dt><dd>Full workflow / manipulation checkpoint</dd>
+<dt>Evidence</dt><dd>Runtime: validated_reset; automated checks 7/7. Geometry review and witness pending.</dd></dl></article><article data-family="contact"><small>CONTACT · CUSTOM TASK · EXPERIMENTAL</small>
+<h2>GuidedTrayInsertion</h2><figure><img loading="lazy" src="../cobot_integration/challenge/images/GuidedTrayInsertion.scene.jpg" alt="Development reset for GuidedTrayInsertion"><figcaption>Development reset · starting scene only</figcaption></figure><p>Slide the tray into the blue countertop guides, seat it against the back stop, then release it.</p>
+<dl><dt>Primary variation · easy → medium → hard</dt><dd>clearance_m: 0.03 → 0.02 → 0.01</dd>
+<dt>Initialization</dt><dd>Full workflow / manipulation checkpoint</dd>
+<dt>Evidence</dt><dd>Runtime: validated_reset; automated checks 7/7. Geometry review and witness pending.</dd></dl></article><article data-family="contact"><small>CONTACT · CUSTOM TASK · EXPERIMENTAL</small>
+<h2>SpongeContactCoverage</h2><figure><img loading="lazy" src="../cobot_integration/challenge/images/SpongeContactCoverage.scene.jpg" alt="Development reset for SpongeContactCoverage"><figcaption>Development reset · starting scene only</figcaption></figure><p>Grasp the sponge and wipe at least 90 percent of the marked patch through physical contact, then release it on the counter.</p>
+<dl><dt>Primary variation · easy → medium → hard</dt><dd>patch_width_m: 0.12 → 0.18 → 0.24</dd>
+<dt>Initialization</dt><dd>Full workflow / manipulation checkpoint</dd>
+<dt>Evidence</dt><dd>Runtime: validated_reset; automated checks 7/7. Geometry review and witness pending.</dd></dl></article></section><h2>Evaluation contract</h2><p>Prepare 20 practice and 50 formal scenes per task, difficulty and initialization mode. Methods share frozen scenes, observations, action limits and success rules. Record controller development, demonstration and pretraining budgets separately. Report diagnostic runs separately from qualified formal runs.</p>
+<p>Tray guides are removable tabletop apparatus. Wiping scores physical contact coverage, not cleaning chemistry. Rack slot bounds and bowl seated-height intervals require asset-specific collision review. No synthetic force sensor or fixture geometry change is introduced.</p>
+<script>function filter(f){document.querySelectorAll('article').forEach(e=>e.hidden=f!=='all'&&e.dataset.family!==f)}</script></html>
